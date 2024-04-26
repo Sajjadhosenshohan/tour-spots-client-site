@@ -1,0 +1,123 @@
+[
+    {
+      "tourists_spot_name": "Sundarbans",
+      "country_Name": "Bangladesh",
+      "location": "Khulna Division",
+      "short_description": "Home to the largest mangrove forest in the world, famous for its rich biodiversity including the Bengal tiger.",
+      "average_cost": "$800",
+      "seasonality": "Winter",
+      "travel_time": "4 days",
+      "totalVisitorsPerYear": 500000
+    },
+    {
+      "tourists_spot_name": "Bangkok",
+      "country_Name": "Thailand",
+      "location": "Central Thailand",
+      "short_description": "Vibrant capital city known for its ornate temples, bustling street markets, and delicious street food.",
+      "average_cost": "$1200",
+      "seasonality": "Winter",
+      "travel_time": "4 days",
+      "totalVisitorsPerYear": 8000000
+    },
+    {
+      "tourists_spot_name": "Bali",
+      "country_Name": "Indonesia",
+      "location": "Bali Island",
+      "short_description": "Renowned for its lush landscapes, stunning beaches, and vibrant culture, offering a perfect tropical getaway.",
+      "average_cost": "$1500",
+      "seasonality": "Summer",
+      "travel_time": "7 days",
+      "totalVisitorsPerYear": 6000000
+    },
+    {
+      "tourists_spot_name": "Kuala Lumpur",
+      "country_Name": "Malaysia",
+      "location": "Selangor",
+      "short_description": "Modern metropolis known for its towering skyscrapers, bustling shopping districts, and diverse culinary scene.",
+      "average_cost": "$1000",
+      "seasonality": "Spring",
+      "travel_time": "3 days",
+      "totalVisitorsPerYear": 4000000
+    },
+    {
+      "tourists_spot_name": "Ha Long Bay",
+      "country_Name": "Vietnam",
+      "location": "Quang Ninh Province",
+      "short_description": "UNESCO World Heritage Site famous for its emerald waters and thousands of towering limestone islands topped with rainforests.",
+      "average_cost": "$900",
+      "seasonality": "Autumn",
+      "travel_time": "5 days",
+      "totalVisitorsPerYear": 3000000
+    },
+    {
+      "tourists_spot_name": "Angkor Wat",
+      "country_Name": "Cambodia",
+      "location": "Siem Reap Province",
+      "short_description": "Largest religious monument in the world, showcasing Khmer architecture and ancient ruins amidst lush jungles.",
+      "average_cost": "$1700",
+      "seasonality": "Spring",
+      "travel_time": "5 days",
+      "totalVisitorsPerYear": 2500000
+    },
+    {
+      "tourists_spot_name": "Cox's Bazar",
+      "country_Name": "Bangladesh",
+      "location": "Chittagong Division",
+      "short_description": "World's longest natural sandy sea beach, offering breathtaking sunsets and serene coastal landscapes.",
+      "average_cost": "$700",
+      "seasonality": "Summer",
+      "travel_time": "3 days",
+      "totalVisitorsPerYear": 1000000
+    },
+    {
+      "tourists_spot_name": "Chiang Mai",
+      "country_Name": "Thailand",
+      "location": "Northern Thailand",
+      "short_description": "Historic city surrounded by mountains, known for its ancient temples, vibrant markets, and lush countryside.",
+      "average_cost": "$1300",
+      "seasonality": "Autumn",
+      "travel_time": "5 days",
+      "totalVisitorsPerYear": 3000000
+    },
+    {
+      "tourists_spot_name": "Borobudur Temple",
+      "country_Name": "Indonesia",
+      "location": "Central Java",
+      "short_description": "World's largest Buddhist temple complex, showcasing intricate carvings and stunning architecture.",
+      "average_cost": "$1200",
+      "seasonality": "Spring",
+      "travel_time": "4 days",
+      "totalVisitorsPerYear": 1500000
+    },
+    {
+      "tourists_spot_name": "Langkawi",
+      "country_Name": "Malaysia",
+      "location": "Kedah",
+      "short_description": "Tropical paradise famous for its pristine beaches, crystal-clear waters, and lush rainforests.",
+      "average_cost": "$1100",
+      "seasonality": "Summer",
+      "travel_time": "4 days",
+      "totalVisitorsPerYear": 2000000
+    },
+    {
+      "tourists_spot_name": "Ho Chi Minh City",
+      "country_Name": "Vietnam",
+      "location": "Southern Vietnam",
+      "short_description": "Dynamic metropolis known for its French colonial landmarks, vibrant street life, and bustling markets.",
+      "average_cost": "$1000",
+      "seasonality": "Winter",
+      "travel_time": "4 days",
+      "totalVisitorsPerYear": 5000000
+    },
+    {
+      "tourists_spot_name": "Siem Reap",
+      "country_Name": "Cambodia",
+      "location": "Siem Reap Province",
+      "short_description": "Gateway to the Angkor region, featuring lively markets, delicious cuisine, and a blend of Khmer and colonial architecture.",
+      "average_cost": "$1400",
+      "seasonality": "Autumn",
+      "travel_time": "5 days",
+      "totalVisitorsPerYear": 2000000
+    }
+  ]
+  

@@ -15,6 +15,7 @@ import AllTourists from './components/AllTourists';
 import MyList from './components/MyList';
 import { Toaster } from 'react-hot-toast';
 import AuthProvider from './Firebase/AuthProvider';
+import ViewDetails from './pages/ViewDetails/ViewDetails';
 // import TourSection from './components/TourSection';
 // import TourSection from './components/TourSection';
 
@@ -26,20 +27,23 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: ()=>fetch(`http://localhost:5000/allTour`)
         
       },
       {
         path: "/addTour",
-        element: <AddTourists></AddTourists>
-      },
-      // {
-      //   path: "/",
-      //   element: <TourSection></TourSection>,
+        element: <AddTourists></AddTourists>,
         
-      // },
+      },
+      {
+        path: "/viewDetails/:id",
+        element: <ViewDetails></ViewDetails>,
+        // loader: ({params})=> fetch(`http://localhost:5000/views/${params.id}`)
+      },
       {
         path: "/allTour",
-        element: <AllTourists></AllTourists>
+        element: <AllTourists></AllTourists>,
+        loader: ()=>fetch(`http://localhost:5000/allTour`)
       },
       {
         path: "/myList",

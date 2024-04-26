@@ -4,15 +4,15 @@ import { AuthContext } from "../Firebase/AuthProvider";
 
 const AddTourists = () => {
     const { user } = useContext(AuthContext)
-    console.log(user)
+   
 
     const handleAddCoffee = event => {
         event.preventDefault();
         const form = event.target
 
-        const name = user.displayName;
+        const name = user?.displayName || 'name not found';
 
-        const email = user.email;
+        const email = user?.email || 'email not found';
 
         const tourists_spot_name = form.tourists_spot_name.value;
         const country_Name = form.country_Name.value;
@@ -89,7 +89,7 @@ const AddTourists = () => {
                         <span>Your name
                         </span>
                     </label>
-                    <input type="text" readOnly placeholder="Your name" name="name" defaultValue={user.displayName} className="input input-bordered w-full " />
+                    <input type="text" readOnly placeholder="Your name" name="name" defaultValue={user?.displayName} className="input input-bordered w-full " />
                 </div>
                 {/*email*/}
                 <div className="">
@@ -97,7 +97,7 @@ const AddTourists = () => {
                         <span>Your email
                         </span>
                     </label>
-                    <input type="text" readOnly placeholder="email" name="email" defaultValue={user.email} className="input input-bordered w-full " />
+                    <input type="text" readOnly placeholder="email" name="email" defaultValue={user?.email} className="input input-bordered w-full " />
                 </div>
                 {/*tourists_spot_name*/}
                 <div className="">
