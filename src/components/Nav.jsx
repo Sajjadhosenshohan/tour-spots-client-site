@@ -42,7 +42,7 @@ const Nav = () => {
                         {/* <HiHome className="text-primary" /> */}
 
 
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary via-green-400 to-blue-400">Tour Guru</span>
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary via-green-400 to-blue-400">GoWilds</span>
 
 
                     </Link>

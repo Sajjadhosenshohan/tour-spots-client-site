@@ -5,34 +5,41 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 // import SingleCardByUser from "./SingleCardByUser";
 
 const AllTourists = () => {
-
+// loader
     const LoadInfo = useLoaderData();
     const [allTourSpot, setAllTourSpot] = useState(LoadInfo)
 
-    // wishList
-    // const bloo2 = getBook2()
+    console.log("hgijkhalihiu", allTourSpot)
+
+    // state
     const [readAll2, setReadAll2] = useState(allTourSpot);
 
 
-    const handleFilter = (filterType, sortDirection) => {
-        let filteredWishList;
 
-        if (filterType === 'averageCost') {
-            filteredWishList = [...readAll2].sort((a, b) => {
-                const costA = a.average_cost;
-                const costB = b.average_cost;
-                if (sortDirection === 'asc') {
-                    return costA - costB;
-                } else {
-                    return costB - costA;
-                }
-            });
-        } else {
-            filteredWishList = [...readAll2];
+    const handleFilter = (filterType) => {
+        
+
+        if (filterType === 'all') {
+
+            setReadAll2(allTourSpot);
+
         }
+        else if (filterType === 'ascending') {
 
-        setReadAll2(filteredWishList);
+            const   filteredWishList = [...readAll2].sort((a, b) => b.average_cost.substring(1) - a.average_cost.substring(1));
+            setReadAll2(filteredWishList);
+
+        }
+        else if (filterType === 'descending') {
+
+
+            const   filteredWishList = [...readAll2].sort((a, b) => a.average_cost.substring(1) - b.average_cost.substring(1));
+            setReadAll2(filteredWishList);
+        }
+    
+        
     };
+
 
 
     return (
@@ -53,13 +60,9 @@ const AllTourists = () => {
 
 
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        {/* <li onClick={() => handleFilter('rating')}><a>Lu</a></li>
-                        <li onClick={() => handleFilter('totalPages')}><a>uL</a></li> */}
-
-                        <li onClick={() => handleFilter('averageCost', 'asc')}><a>By Average Cost (Ascending)</a></li>
-                        <li onClick={() => handleFilter('averageCost', 'desc')}><a>By Average Cost (Descending)</a></li>
-
-
+                        <li onClick={() => handleFilter('all')}><a>all</a></li>
+                        <li onClick={() => handleFilter('ascending')}><a>ascending</a></li>
+                        <li onClick={() => handleFilter('descending')}><a>descending</a></li>
 
                     </ul>
                 </div>

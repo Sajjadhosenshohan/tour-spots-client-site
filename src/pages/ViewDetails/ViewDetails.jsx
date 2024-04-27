@@ -8,7 +8,7 @@ import { TiWeatherPartlySunny } from "react-icons/ti";
 import { useParams } from "react-router-dom";
 
 const ViewDetails = () => {
-    const { id } = useParams()
+    const { id ,} = useParams()
     console.log(id)
 
     const [details, setDetails] = useState({});

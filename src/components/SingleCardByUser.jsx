@@ -5,7 +5,7 @@ import { GiTakeMyMoney } from "react-icons/gi";
 import { MdTour } from "react-icons/md";
 const SingleCardByUser = ({ tour }) => {
 
-    const { _id, tourists_spot_name, country_Name, location, average_cost, totalVisitorsPerYear, travel_time, seasonality, short_description, image } = tour
+    const { _id, tourists_spot_name, country_Name, location, average_cost,  travel_time, seasonality, image } = tour
 
     console.log(tour)
     return (

@@ -17,6 +17,9 @@ import { Toaster } from 'react-hot-toast';
 import AuthProvider from './Firebase/AuthProvider';
 import ViewDetails from './pages/ViewDetails/ViewDetails';
 import Update from './pages/update.jsx/Update';
+import Countries from './components/Countries';
+import TargetCountry from './components/TargetCountry';
+// import TargetCountry from './components/TargetCountry';
 // import TourSection from './components/TourSection';
 // import TourSection from './components/TourSection';
 
@@ -63,6 +66,15 @@ const router = createBrowserRouter([
         path: "/signUp",
         element: <SignUp></SignUp>
       },
+      {
+        path: "/countriesData",
+        element: <Countries></Countries>,
+        // loader: ()=>fetch(`http://localhost:5000/countriesData/`)
+      },
+      {
+        path: "/target/:country_Name",
+        element: <TargetCountry></TargetCountry>
+      }
     ]
   },
 ]);

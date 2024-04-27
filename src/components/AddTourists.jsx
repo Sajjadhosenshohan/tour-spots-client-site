@@ -108,12 +108,20 @@ const AddTourists = () => {
                     <input type="text" placeholder="tourists_spot_name" name="tourists_spot_name" className="input input-bordered w-full " />
                 </div>
 
-                {/* country_Name*/}
-                <div className="">
+               {/* country_Name */}
+               <div className="">
                     <label className="label">
-                        <span>country_Name</span>
+                        <span>Country_Name</span>
                     </label>
-                    <input type="text" placeholder="country_Name" name="country_Name" className="input input-bordered w-full" />
+                    <select name="country_Name" className="select select-bordered w-full">
+                        <option disabled selected>country_Name</option>
+                        <option>Bangladesh</option>
+                        <option>Thailand </option>
+                        <option>Indonesia</option>
+                        <option>Malaysia</option>
+                        <option>Vietnam</option>
+                        <option>Cambodia</option>
+                    </select>
                 </div>
 
                 {/* location*/}
