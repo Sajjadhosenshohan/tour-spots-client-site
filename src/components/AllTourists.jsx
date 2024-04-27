@@ -1,12 +1,40 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import DecendingCard from "./DecendingCard";
+import { RiArrowDropDownLine } from "react-icons/ri";
 // import SingleCardByUser from "./SingleCardByUser";
 
 const AllTourists = () => {
 
     const LoadInfo = useLoaderData();
     const [allTourSpot, setAllTourSpot] = useState(LoadInfo)
+
+    // wishList
+    // const bloo2 = getBook2()
+    const [readAll2, setReadAll2] = useState(allTourSpot);
+
+
+    const handleFilter = (filterType, sortDirection) => {
+        let filteredWishList;
+
+        if (filterType === 'averageCost') {
+            filteredWishList = [...readAll2].sort((a, b) => {
+                const costA = a.average_cost;
+                const costB = b.average_cost;
+                if (sortDirection === 'asc') {
+                    return costA - costB;
+                } else {
+                    return costB - costA;
+                }
+            });
+        } else {
+            filteredWishList = [...readAll2];
+        }
+
+        setReadAll2(filteredWishList);
+    };
+
+
     return (
         <div className="mt-24 mb-24">
             <div className="text-center mb-12 mx-auto w-1/2 md:w-full">
@@ -14,9 +42,32 @@ const AllTourists = () => {
                 <p>All tourist sport</p>
             </div>
 
+            {/* button  */}
+            <div className="mt-8 mb-10 flex  justify-center">
+
+                <div className="dropdown">
+                    <div tabIndex={0} role="button" className="btn m-1 font-bold text-white  bg-[#23BE0A]">
+                        <h2>Sort By</h2>
+                        <RiArrowDropDownLine />
+                    </div>
+
+
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                        {/* <li onClick={() => handleFilter('rating')}><a>Lu</a></li>
+                        <li onClick={() => handleFilter('totalPages')}><a>uL</a></li> */}
+
+                        <li onClick={() => handleFilter('averageCost', 'asc')}><a>By Average Cost (Ascending)</a></li>
+                        <li onClick={() => handleFilter('averageCost', 'desc')}><a>By Average Cost (Descending)</a></li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 {
-                    allTourSpot.map((allTour, index) => <DecendingCard key={index}
+                    readAll2.map((allTour, index) => <DecendingCard key={index}
 
                         allTour={allTour}
                         setAllTourSpot={setAllTourSpot}

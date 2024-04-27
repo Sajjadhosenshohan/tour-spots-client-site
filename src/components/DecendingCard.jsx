@@ -10,6 +10,8 @@ const DecendingCard = ({ allTour }) => {
     const { _id, tourists_spot_name, average_cost, totalVisitorsPerYear, travel_time, seasonality, image } = allTour
 
     console.log(allTour)
+
+    
     return (
 
         <div className="relative  rounded overflow-hidden shadow-lg m-4">

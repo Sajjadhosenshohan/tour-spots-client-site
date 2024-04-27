@@ -16,6 +16,7 @@ import MyList from './components/MyList';
 import { Toaster } from 'react-hot-toast';
 import AuthProvider from './Firebase/AuthProvider';
 import ViewDetails from './pages/ViewDetails/ViewDetails';
+import Update from './pages/update.jsx/Update';
 // import TourSection from './components/TourSection';
 // import TourSection from './components/TourSection';
 
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
       {
         path: "/myList",
         element: <MyList></MyList>
+      },
+      {
+        path: "/updateForm/:id",
+        element: <Update></Update>,
+        loader: ({params})=>fetch(`http://localhost:5000/update/${params.id}`)
       },
       {
         path: "/signIn",

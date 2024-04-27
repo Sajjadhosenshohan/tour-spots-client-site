@@ -8,8 +8,8 @@ const TourSection = ({tourInfos, setTourInfos}) => {
     return (
         <div className="mt-24 mb-24">
             <div className="text-center mb-12 mx-auto w-1/2 md:w-full">
-                <h2 className="font-bold text-4xl mb-3 animate__animated animate__bounce" >Discover Latest Estates</h2>
-                <p>Newest Properties Around You</p>
+                <h2 className="font-bold text-4xl mb-3 animate__animated animate__bounce" >Discover Latest Tourists Spots</h2>
+                <p>Newest Tourists Spots Around You</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
