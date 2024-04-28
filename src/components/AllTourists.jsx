@@ -5,48 +5,48 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 // import SingleCardByUser from "./SingleCardByUser";
 
 const AllTourists = () => {
-// loader
+    // loader
     const LoadInfo = useLoaderData();
     const [allTourSpot, setAllTourSpot] = useState(LoadInfo)
 
-    console.log("hgijkhalihiu", allTourSpot)
+    console.log(allTourSpot)
 
     // state
-    const [readAll2, setReadAll2] = useState(allTourSpot);
+    const [tours, setTours] = useState(allTourSpot);
 
 
 
     const handleFilter = (filterType) => {
-        
+
 
         if (filterType === 'all') {
 
-            setReadAll2(allTourSpot);
+            setTours(allTourSpot);
 
         }
         else if (filterType === 'ascending') {
 
-            const   filteredWishList = [...readAll2].sort((a, b) => b.average_cost.substring(1) - a.average_cost.substring(1));
-            setReadAll2(filteredWishList);
+            const filteredWishList = [...tours].sort((a, b) => b.average_cost.substring(1) - a.average_cost.substring(1));
+            setTours(filteredWishList);
 
         }
         else if (filterType === 'descending') {
 
 
-            const   filteredWishList = [...readAll2].sort((a, b) => a.average_cost.substring(1) - b.average_cost.substring(1));
-            setReadAll2(filteredWishList);
+            const filteredWishList = [...tours].sort((a, b) => a.average_cost.substring(1) - b.average_cost.substring(1));
+            setTours(filteredWishList);
         }
-    
-        
+
+
     };
 
 
 
     return (
-        <div className="mt-24 mb-24">
+        <div className="mt-12 mb-24">
             <div className="text-center mb-12 mx-auto w-1/2 md:w-full">
-                <h2 className="font-bold text-4xl mb-3" >All tourist sport</h2>
-                <p>All tourist sport</p>
+                <h2 className="font-bold text-4xl mb-3 text-primary" >Explore All Tourist Spot</h2>
+                <p>Discover new adventures around the globe.</p>
             </div>
 
             {/* button  */}
@@ -54,15 +54,15 @@ const AllTourists = () => {
 
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn m-1 font-bold text-white  bg-[#23BE0A]">
-                        <h2>Sort By</h2>
+                        <h2>Sort Price:</h2>
                         <RiArrowDropDownLine />
                     </div>
 
 
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li onClick={() => handleFilter('all')}><a>all</a></li>
-                        <li onClick={() => handleFilter('ascending')}><a>ascending</a></li>
-                        <li onClick={() => handleFilter('descending')}><a>descending</a></li>
+                        <li onClick={() => handleFilter('ascending')}><a>High to Low</a></li>
+                        <li onClick={() => handleFilter('descending')}><a>Low to High</a></li>
 
                     </ul>
                 </div>
@@ -70,7 +70,7 @@ const AllTourists = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 {
-                    readAll2.map((allTour, index) => <DecendingCard key={index}
+                    tours.map((allTour, index) => <DecendingCard key={index}
 
                         allTour={allTour}
                         setAllTourSpot={setAllTourSpot}

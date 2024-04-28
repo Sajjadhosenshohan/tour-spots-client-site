@@ -8,7 +8,7 @@ const Root = () => {
     // const navigation = useNavigation()
     
     return (
-        <div className="max-w-[85%] mx-auto">
+        <div className="max-w-[85%] mx-auto ">
             <Nav></Nav>
             <Outlet></Outlet>
             <Footer></Footer>

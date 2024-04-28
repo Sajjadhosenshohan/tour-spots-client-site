@@ -25,6 +25,9 @@ import Error from './pages/Error/Error';
 // import TourSection from './components/TourSection';
 // import TourSection from './components/TourSection';
 
+
+// http://localhost:5000
+
 const router = createBrowserRouter([
   {
     path: "/",

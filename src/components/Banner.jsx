@@ -45,7 +45,7 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-50"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md">
-                                <h1 className="mb-5 text-5xl font-bold">Tour Travel & Adventure Camping</h1>
+                                <h1 className="mb-5 text-5xl font-bold">Tour & Adventure Camping</h1>
                                 <p className="mb-5">It`s not Just Travel. we create Lifelong Adventures</p>
                                 <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Let's Booking`}</button>
                             </div>
@@ -59,7 +59,7 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-50"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md">
-                                <h1 className="mb-5 text-5xl font-bold">Tour Travel & Adventure Camping</h1>
+                                <h1 className="mb-5 text-5xl font-bold">Tour & Adventure Camping</h1>
                                 <p className="mb-5">It`s not Just Travel. we create Lifelong Adventures</p>
                                 <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Let's Booking`}</button>
                             </div>
@@ -73,7 +73,7 @@ const Banner = () => {
                         <div className="hero-overlay bg-opacity-50"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md">
-                                <h1 className="mb-5 text-5xl font-bold">Tour Travel & Adventure Camping</h1>
+                                <h1 className="mb-5 text-5xl font-bold">Tour  & Adventure Camping</h1>
                                 <p className="mb-5">It`s not Just Travel. we create Lifelong Adventures</p>
                                 <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Let's Booking`}</button>
                             </div>
