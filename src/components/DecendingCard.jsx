@@ -23,11 +23,11 @@ const DecendingCard = ({ allTour }) => {
                 <div className="font-bold text-xl mb-2">{tourists_spot_name}</div>
 
                 {/* <div className="flex gap-2 items-center  justify-start mb-2">
-                    <FaLocationDot className=" text-secondary" />
+                    <FaLocationDot className=" text-primary" />
                     <p className="text-gray-700 text-base ">{`${location}, ${country_Name}`}</p>
                 </div> */}
                 <div className="flex gap-2 items-center  justify-start mb-2">
-                    <GiTakeMyMoney className=" text-secondary" />
+                    <GiTakeMyMoney className=" text-primary" />
                     <p className="text-gray-700">Average_cost: {average_cost}</p>
                 </div>
 
@@ -35,19 +35,19 @@ const DecendingCard = ({ allTour }) => {
                     {/* <p className="text-gray-700">Average Cost: {average_cost}</p> */}
 
                     <div className="flex gap-2 items-center  justify-start mb-2">
-                        <TiWeatherPartlySunny className=" text-secondary" />
+                        <TiWeatherPartlySunny className=" text-primary" />
                         <p className="text-gray-700">TotalVisitorsPerYear: {totalVisitorsPerYear}</p>
                     </div>
                     {/* _______________ */}
 
                     <div className="flex gap-2 items-center  justify-start mb-2">
-                        <TiWeatherPartlySunny className=" text-secondary" />
+                        <TiWeatherPartlySunny className=" text-primary" />
                         <p className="text-gray-700">Seasonality: {seasonality}</p>
                     </div>
                     {/* ____________ */}
 
                     <div className="flex gap-2 items-center  justify-start mb-2">
-                        <MdTour className=" text-secondary" />
+                        <MdTour className=" text-primary" />
                         <p className="text-gray-700">Travel time: {travel_time}</p>
                     </div>
 
@@ -55,7 +55,7 @@ const DecendingCard = ({ allTour }) => {
 
                 </div>
                 <Link to={`/viewDetails/${_id}`}>
-                    <button className="bg-secondary hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full text-center">View details</button>
+                    <button className="bg-primary hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full text-center">View details</button>
                 </Link>
             </div>
         </div>

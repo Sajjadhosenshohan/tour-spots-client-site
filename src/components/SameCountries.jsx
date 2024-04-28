@@ -27,7 +27,7 @@ const SameCountries = ({detail}) => {
                 <p className="mb-4">{description}</p>
 
                 <Link to={`/target/${country_Name}`}>
-                    <button className="bg-secondary hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full text-center">View details</button>
+                    <button className="bg-primary hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full text-center">View details</button>
                 </Link>
             </div>
         </div>

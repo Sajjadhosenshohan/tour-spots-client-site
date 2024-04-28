@@ -3,7 +3,7 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { Link, } from "react-router-dom";
+import { Link,  useNavigate, } from "react-router-dom";
 import { AuthContext } from "../../Firebase/AuthProvider";
 import { FaEyeSlash, FaRegEye } from "react-icons/fa";
 const SignUp = () => {
@@ -14,7 +14,7 @@ const SignUp = () => {
 
     // const location = useLocation()
     // console.log('location', location);
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
 
 
@@ -44,7 +44,7 @@ const SignUp = () => {
                 if (result.user) {
                     toast.success("Register successfully!")
                     logout()
-                    // navigate("/login")
+                    navigate("/signIn")
                 }
 
             })
@@ -80,7 +80,7 @@ const SignUp = () => {
                             {...register("name", { required: true })}
                         />
 
-                        {errors.name && <span className='text-red-500'>This field is required</span>}
+                        {errors.name && <span className='text-red-700 font-bold'>This field is required</span>}
                     </div>
 
                     {/* email */}
@@ -92,7 +92,7 @@ const SignUp = () => {
                             {...register("email", { required: true })}
                         />
 
-                        {errors.email && <span className='text-red-500'>This field is required</span>}
+                        {errors.email && <span className='text-red-700 font-bold'>This field is required</span>}
                     </div>
 
                     {/* photo */}
@@ -104,7 +104,7 @@ const SignUp = () => {
                             {...register("photo", { required: true })}
                         />
 
-                        {errors.photo && <span className='text-red-500'>This field is required</span>}
+                        {errors.photo && <span className='text-red-700 font-bold'>This field is required</span>}
                     </div>
 
                     {/* password */}
@@ -129,7 +129,7 @@ const SignUp = () => {
                             </span>
                         </div>
 
-                        <p className="text-red-500">{error}</p>
+                        <p className="text-red-700 font-bold">{error}</p>
 
                     </div>
 
@@ -141,7 +141,7 @@ const SignUp = () => {
 
                 <div className="px-8 flex justify-between mb-5">
                     <p>Already Have Account?</p>
-                    <Link to="/signUp" className="text-blue-700 underline">Login Now</Link>
+                    <Link to="/signIn" className="text-blue-700 underline">Login Now</Link>
                 </div>
 
             </div>

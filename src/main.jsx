@@ -19,6 +19,8 @@ import ViewDetails from './pages/ViewDetails/ViewDetails';
 import Update from './pages/update.jsx/Update';
 import Countries from './components/Countries';
 import TargetCountry from './components/TargetCountry';
+import ProtectedRoute from './pages/ProtectedRoute';
+import Error from './pages/Error/Error';
 // import TargetCountry from './components/TargetCountry';
 // import TourSection from './components/TourSection';
 // import TourSection from './components/TourSection';
@@ -27,36 +29,43 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=>fetch(`http://localhost:5000/allTour`)
-        
+        loader: () => fetch(`http://localhost:5000/allTour`)
+
       },
       {
         path: "/addTour",
-        element: <AddTourists></AddTourists>,
-        
+        element: <ProtectedRoute>
+          <AddTourists></AddTourists>
+        </ProtectedRoute>,
+
       },
       {
         path: "/viewDetails/:id",
-        element: <ViewDetails></ViewDetails>,
+        element: <ProtectedRoute>
+          <ViewDetails></ViewDetails>
+        </ProtectedRoute>,
         // loader: ({params})=> fetch(`http://localhost:5000/views/${params.id}`)
       },
       {
         path: "/allTour",
         element: <AllTourists></AllTourists>,
-        loader: ()=>fetch(`http://localhost:5000/allTour`)
+        loader: () => fetch(`http://localhost:5000/allTour`)
       },
       {
         path: "/myList",
-        element: <MyList></MyList>
+        element: <ProtectedRoute>
+          <MyList></MyList>
+        </ProtectedRoute>
       },
       {
         path: "/updateForm/:id",
         element: <Update></Update>,
-        loader: ({params})=>fetch(`http://localhost:5000/update/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
       },
       {
         path: "/signIn",
@@ -73,7 +82,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/target/:country_Name",
-        element: <TargetCountry></TargetCountry>
+        element: <ProtectedRoute>
+          <TargetCountry></TargetCountry>
+        </ProtectedRoute>
       }
     ]
   },

@@ -6,7 +6,7 @@ const AddTourists = () => {
     const { user } = useContext(AuthContext)
    
 
-    const handleAddCoffee = event => {
+    const handleAddTour = event => {
         event.preventDefault();
         const form = event.target
 
@@ -79,9 +79,9 @@ const AddTourists = () => {
     //   })
     return (
         <div className="bg-[#F4F3F0] md:p-24">
-            <h1 className='text-4xl  font-bold text-center mb-5'>Tour Booking Form</h1>
+            <h1 className='text-4xl  font-bold text-center mb-6 text-primary'>Add Tourists Spot Form</h1>
 
-            <form onSubmit={handleAddCoffee} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleAddTour} className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                 {/*name*/}
                 <div className="">
@@ -194,9 +194,9 @@ const AddTourists = () => {
                 </div>
 
                 {/* button */}
-                <div className=" w-full md:col-span-2 rounded-md">
-                    <input type="submit" value="Booking now" className="btn bg-[#D2B48C] btn-block text-[#331A15] text-2xl" />
-                </div>
+               
+                    <input type="submit"  value="Add Tourists Spot" className="w-full col-span-2 font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center" />
+                
             </form>
         </div>
     );

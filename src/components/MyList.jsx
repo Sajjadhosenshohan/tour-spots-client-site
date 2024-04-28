@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const MyList = () => {
 
-    const { user } = useContext(AuthContext)
+    const { user , setReload, logOut} = useContext(AuthContext)
 
     const [details, setDetails] = useState([]);
 
@@ -37,6 +37,8 @@ const MyList = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data)
+                        setReload(true)
+                        
                         if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
@@ -46,6 +48,8 @@ const MyList = () => {
 
                             const remaining = details.filter(d => d._id !== _id)
                             setDetails(remaining)
+                            setReload(false)
+                            
                         }
                     })
             }

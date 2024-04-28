@@ -8,6 +8,8 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
     console.log(user)
+
+    const [reload, setReload] = useState(false)
     const [loading, setLoading] = useState(true)
 
     // social provider
@@ -65,9 +67,9 @@ const AuthProvider = ({children}) => {
         return () => {
             unSubscribe()
         }
-    }, [])
+    }, [reload])
 
-    const Info = { createUser, signIn, googleLogin, githubLogin, user, logout, loading}
+    const Info = { createUser, signIn, googleLogin, githubLogin, user, logout, loading, setReload}
     return (
         <AuthContext.Provider value={Info}>
             {children}

@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 
 const Country = ({ country }) => {
 
-    const { country_Name, description, image } = country
+    const { country_Name, short_description, image } = country
     return (
         <div className="relative flex flex-col rounded overflow-hidden shadow-lg m-4">
             <div>
                 <img src={image} alt="Siem Reap" className="relative w-full h-48 object-cover" />
                 <p className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-extrabold text-white text-3xl">{country_Name}</p>
-
-
             </div>
 
             <span className="absolute top-0 right-0 bg-white  rounded-full p-3 w-12 h-12 font-bold text-4xl text-[#F42B6F] flex justify-center items-center ">
@@ -23,10 +21,10 @@ const Country = ({ country }) => {
                     <span className="mr-3 text-primary"><FaGlobe /></span> {country_Name}
                 </div>
 
-                <p className="mb-4">{description}</p>
+                <p className="mb-4">{short_description}</p>
 
                 <Link to={`/target/${country_Name}`}>
-                    <button className="bg-secondary hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full text-center">View details</button>
+                    <button className="bg-primary hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full text-center">View details</button>
                 </Link>
             </div>
         </div>

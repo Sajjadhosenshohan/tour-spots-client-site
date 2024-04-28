@@ -4,7 +4,7 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { Link, } from "react-router-dom";
+import { Link,  useLocation, useNavigate, } from "react-router-dom";
 import { AuthContext } from "../../Firebase/AuthProvider";
 import { FaEyeSlash, FaRegEye } from "react-icons/fa";
 
@@ -14,9 +14,9 @@ const SignIn = () => {
     const [error, setError] = useState('');
 
     // location
-    // const location = useLocation()
+    const location = useLocation()
     // console.log('location', location);
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     // form
     const {
@@ -44,11 +44,11 @@ const SignIn = () => {
 
                 if (result.user) {
                     toast.success("Login successfully!")
-                    // navigate(location?.state || "/")
+                    navigate(location?.state || "/")
                 }
             })
             .catch(error => {
-                console.error(error)
+                toast.error(`Login error! ${error.message}`)
             })
     }
 
@@ -59,11 +59,12 @@ const SignIn = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success(`Login with ${name}`)
-                // navigate(location?.state ? location.state : "/")
+                navigate(location?.state ? location.state : "/")
 
             })
             .catch(error => {
                 console.error(error)
+                alert("not working")
             })
 
     }
@@ -89,7 +90,7 @@ const SignIn = () => {
                                 {...register("email", { required: true })}
                             />
 
-                            {errors.email && <span className='text-red-700'>This field is required</span>}
+                            {errors.email && <span className='text-red-700 font-bold'>This field is required</span>}
                         </div>
 
 
@@ -116,7 +117,7 @@ const SignIn = () => {
                             </div>
 
 
-                            <p className="text-red-700">{error}</p>
+                            <p className="text-red-700 font-bold">{error}</p>
 
                         </div>
 
@@ -128,7 +129,7 @@ const SignIn = () => {
 
                     <div className="px-8 flex justify-between ">
                         <p>Already Have Account?</p>
-                        <Link to="/register" className="text-blue-700 underline">Register Now</Link>
+                        <Link to="/signUp" className="text-blue-700 underline">Register Now</Link>
                     </div>
 
 

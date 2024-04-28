@@ -1,26 +1,27 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Firebase/AuthProvider";
 import { useContext } from "react";
-
+// import { Tooltip } from 'react-tooltip'
+import { Tooltip } from 'react-tooltip';
 const Nav = () => {
     const { logout, user } = useContext(AuthContext);
 
-    
+
     const Links = <>
         <li>
-            <NavLink to="/" className={({ isActive }) => isActive ? 'border-2 border-primary text-secondary rounded-lg font-bold' : 'font-bold'}>
+            <NavLink to="/" className={({ isActive }) => isActive ? 'border-2 border-primary text-primary rounded-lg font-bold' : 'font-bold'}>
                 Home</NavLink>
         </li>
 
         <li>
-            <NavLink to="/allTour" className={({ isActive }) => isActive ? 'border-2 border-primary text-secondary rounded-lg font-bold' : 'font-bold'}>All Tourists Spot</NavLink>
+            <NavLink to="/allTour" className={({ isActive }) => isActive ? 'border-2 border-primary text-primary rounded-lg font-bold' : 'font-bold'}>All Tourists Spot</NavLink>
         </li>
 
-        <li><NavLink to="/addTour" className={({ isActive }) => isActive ? 'border-2 border-primary text-secondary rounded-lg font-bold' : 'font-bold'}>
+        <li><NavLink to="/addTour" className={({ isActive }) => isActive ? 'border-2 border-primary text-primary rounded-lg font-bold' : 'font-bold'}>
             Add Tourists Spot
         </NavLink></li>
 
-        <li><NavLink to="/myList" className={({ isActive }) => isActive ? 'border-2 border-primary text-secondary rounded-lg font-bold' : 'font-bold'}>
+        <li><NavLink to="/myList" className={({ isActive }) => isActive ? 'border-2 border-primary text-primary rounded-lg font-bold' : 'font-bold'}>
             My List
         </NavLink></li>
     </>
@@ -29,6 +30,7 @@ const Nav = () => {
     return (
         <>
             <div className="navbar bg-base-100">
+
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -42,7 +44,7 @@ const Nav = () => {
                         {/* <HiHome className="text-primary" /> */}
 
 
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary via-green-400 to-blue-400">GoWilds</span>
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-green-400 ">GoWilds</span>
 
 
                     </Link>
@@ -61,16 +63,33 @@ const Nav = () => {
                         user ? <div className="dropdown dropdown-end flex justify-center items-center gap-2">
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar hover:ring-2  hover:ring-green-500">
                                 <div className="w-10 rounded-full">
-                                    <img src={user?.photoURL || "https://i.ibb.co/fYRGNg6/profile.jpg"}
 
-                                        title={(user?.displayName || user.email) || 'Name not found'}
+
+
+                                    <img className="my-anchor-element-class" src={user?.photoURL || "https://i.ibb.co/fYRGNg6/profile.jpg"}
+
+                                        // title={(user?.displayName) || 'Name not found'}
                                         alt="User avatar"
+
+
+                                    />
+
+                                    
+                                
+                                    <Tooltip
+                                        // Don't forget the `.`!
+                                        anchorSelect=".my-anchor-element-class"
+
+
+                                        content={ ((user?.displayName) || 'Name not found')}
+
+                                        style={{ backgroundColor: "#23BE0A", color: "white" }}
                                     />
 
                                 </div>
                             </label>
 
-                            <button onClick={logout} className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-secondary text-center">
+                            <button onClick={logout} className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">
                                 Logout
                             </button>
 
@@ -79,11 +98,11 @@ const Nav = () => {
                             :
                             <div className="space-x-2">
                                 <Link to='/signIn' >
-                                    <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-secondary text-center">Login</button>
+                                    <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">Login</button>
 
                                 </Link>
                                 <Link to='/SignUp' >
-                                    <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-secondary text-center">Register</button>
+                                    <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">Register</button>
 
                                 </Link>
                             </div>
