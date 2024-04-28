@@ -45,7 +45,7 @@ const AllTourists = () => {
     return (
         <div className="mt-12 mb-24">
             <div className="text-center mb-12 mx-auto w-1/2 md:w-full">
-                <h2 className="font-bold text-4xl mb-3 text-primary" >Explore All Tourist Spot</h2>
+                <h2 className="font-bold text-4xl mb-3 " >Explore All Tourist Spot</h2>
                 <p>Discover new adventures around the globe.</p>
             </div>
 

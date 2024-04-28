@@ -11,7 +11,7 @@ const MyList = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myList/${user?.email}`)
+        fetch(`https://travel-server-virid.vercel.app/myList/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -31,7 +31,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/delete/${_id}`, {
+                fetch(`https://travel-server-virid.vercel.app/delete/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -42,7 +42,7 @@ const MyList = () => {
                         if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
-                                text: "Your file has been deleted.",
+                                text: "Your tour spots cart has been deleted.",
                                 icon: "success"
                             });
 
@@ -58,20 +58,16 @@ const MyList = () => {
 
 
     return (
-        <div>
-            <h1 className="text-4xl bg-purple-300">My list: {details.length}</h1>
+        <div className="mt-12 mb-24">
+            <h1 className="mb-12 text-xl text-center font-bold">My list: <span className="bg-primary px-3 rounded font-normal">{details.length}</span></h1>
 
             <div>
-                <div className="overflow-x-auto">
-                    <table className="table">
+                <div className="overflow-x-auto ">
+                    <table className="table ">
                         {/* head */}
-                        <thead>
-                            <tr>
-                                <th>
-                                    <label>
-                                        <input type="checkbox" className="checkbox" />
-                                    </label>
-                                </th>
+                        <thead className="border-y-2 border-dotted border-primary">
+                            <tr className="font-bold text-2xl">
+                                <th>List no:</th>
                                 <th>Tourist Spots</th>
                                 <th>Country</th>
                                 <th>Average cost</th>
@@ -79,11 +75,11 @@ const MyList = () => {
                                 <th>Delete</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody >
                             {/* row 1 */}
                             {
                                 details.map((detail, index) => <tr key={index}>
-                                    <th>{index + 1}
+                                    <th className="text-primary">{index + 1}
                                         {/* <label>
                                             <input type="checkbox" className="checkbox" />
                                         </label> */}
@@ -107,7 +103,7 @@ const MyList = () => {
                                     </td>
                                     <td>
 
-                                        <span className="badge badge-ghost badge-sm">{detail.average_cost}</span>
+                                        <span className="badge badge-ghost badge-sm bg-primary ">{detail.average_cost}</span>
                                     </td>
                                     {/* <td>{detail.average_cost}</td> */}
                                     <th>
@@ -122,7 +118,7 @@ const MyList = () => {
                             }
                             
                         </tbody>
-                        
+                        {/* foot */}
 
                     </table>
                 </div>

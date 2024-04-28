@@ -7,7 +7,7 @@ import { TiWeatherPartlySunny } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
 const DecendingCard = ({ allTour }) => {
-    const { _id, tourists_spot_name, average_cost, totalVisitorsPerYear, travel_time, seasonality, image } = allTour
+    const { _id, tourists_spot_name, average_cost, totalVisitorsPerYear, travel_time, seasonality, image, country_Name } = allTour
 
     console.log(allTour)
 
@@ -20,6 +20,7 @@ const DecendingCard = ({ allTour }) => {
             <span className="absolute top-0 right-0 bg-red-400 rounded-sm p-2">{average_cost}</span>
 
             <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">{country_Name}</div>
                 <div className="font-bold text-xl mb-2">{tourists_spot_name}</div>
 
                 {/* <div className="flex gap-2 items-center  justify-start mb-2">

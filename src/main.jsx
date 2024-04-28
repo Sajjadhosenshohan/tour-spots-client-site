@@ -26,7 +26,7 @@ import Error from './pages/Error/Error';
 // import TourSection from './components/TourSection';
 
 
-// http://localhost:5000
+// https://travel-server-virid.vercel.app
 
 const router = createBrowserRouter([
   {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch(`http://localhost:5000/allTour`)
+        loader: () => fetch(`https://travel-server-virid.vercel.app/allTour`)
 
       },
       {
@@ -52,12 +52,12 @@ const router = createBrowserRouter([
         element: <ProtectedRoute>
           <ViewDetails></ViewDetails>
         </ProtectedRoute>,
-        // loader: ({params})=> fetch(`http://localhost:5000/views/${params.id}`)
+        // loader: ({params})=> fetch(`https://travel-server-virid.vercel.app/views/${params.id}`)
       },
       {
         path: "/allTour",
         element: <AllTourists></AllTourists>,
-        loader: () => fetch(`http://localhost:5000/allTour`)
+        loader: () => fetch(`https://travel-server-virid.vercel.app/allTour`)
       },
       {
         path: "/myList",
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
       {
         path: "/updateForm/:id",
         element: <Update></Update>,
-        loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
+        loader: ({ params }) => fetch(`https://travel-server-virid.vercel.app/update/${params.id}`)
       },
       {
         path: "/signIn",
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
       {
         path: "/countriesData",
         element: <Countries></Countries>,
-        // loader: ()=>fetch(`http://localhost:5000/countriesData/`)
+        // loader: ()=>fetch(`https://travel-server-virid.vercel.app/countriesData/`)
       },
       {
         path: "/target/:country_Name",

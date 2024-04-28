@@ -38,7 +38,7 @@ const Update = () => {
 
 
 
-        fetch(`http://localhost:5000/update/${_id}`, {
+        fetch(`https://travel-server-virid.vercel.app/update/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const Update = () => {
                 if (data.modifiedCount
                     > 0) {
                     Swal.fire({
-                        title: 'success!',
+                        title: 'Successfully updated!',
                         text: 'Do you want to continue',
                         icon: 'success',
                         confirmButtonText: 'Cool'
@@ -63,8 +63,8 @@ const Update = () => {
 
     }
     return (
-        <div className="bg-[#F4F3F0] md:p-24">
-            <h1 className='text-4xl  font-bold text-center mb-5'>Update Form</h1>
+        <div className=" md:p-24 bg-green-200 rounded-lg">
+            <h1 className='text-4xl  font-bold text-center mb-6 '>Update Form</h1>
             {/* <p>{id}</p> */}
             <form onSubmit={handleUpdate} className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -185,9 +185,9 @@ const Update = () => {
                 </div>
 
                 {/* button */}
-                <div className=" w-full md:col-span-2 rounded-md">
-                    <input type="submit" value="Update now" className="btn bg-[#D2B48C] btn-block text-[#331A15] text-2xl" />
-                </div>
+                <input type="submit"  value="Update now" className="w-full col-span-2 font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center" />
+
+                {/* <input type="submit"  value="Add Tourists Spot" className="w-full col-span-2 font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center" /> */}
             </form>
         </div>
     );

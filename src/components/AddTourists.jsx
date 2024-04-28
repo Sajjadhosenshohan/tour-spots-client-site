@@ -26,7 +26,7 @@ const AddTourists = () => {
 
         const booking = { name, email, tourists_spot_name, country_Name, location, average_cost, totalVisitorsPerYear, travel_time, seasonality, short_description, image }
 
-        fetch(`http://localhost:5000/allTour`, {
+        fetch(`https://travel-server-virid.vercel.app/allTour`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -78,8 +78,8 @@ const AddTourists = () => {
     //     confirmButtonText: 'Cool'
     //   })
     return (
-        <div className="bg-[#F4F3F0] md:p-24">
-            <h1 className='text-4xl  font-bold text-center mb-6 text-primary'>Add Tourists Spot Form</h1>
+        <div className=" md:p-24 bg-green-200 rounded-lg">
+            <h1 className='text-4xl  font-bold text-center mb-6 '>Add Tourists Spot Form</h1>
 
             <form onSubmit={handleAddTour} className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
