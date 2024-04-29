@@ -1,15 +1,16 @@
 // import React from 'react';
 
 // import { useContext, useState } from "react";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { Link,  useLocation, useNavigate, } from "react-router-dom";
+import { Link, useLocation, useNavigate, } from "react-router-dom";
 import { AuthContext } from "../../Firebase/AuthProvider";
 import { FaEyeSlash, FaRegEye } from "react-icons/fa";
 
 const SignIn = () => {
     const [showPass, setShowPass] = useState(false);
+    const [registrationSuccess, SetRegistrationSuccess] = useState(false);
     const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
     const [error, setError] = useState('');
 
@@ -44,7 +45,7 @@ const SignIn = () => {
 
                 if (result.user) {
                     toast.success("Login successfully!")
-                    navigate(location?.state || "/")
+                    navigate(location?.state ? location.state : "/")
                 }
             })
             .catch(error => {
@@ -59,7 +60,9 @@ const SignIn = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success(`Login with ${name}`)
-                navigate(location?.state ? location.state : "/")
+                if (result.user) {
+                    navigate(location?.state ? location.state : "/")
+                }
 
             })
             .catch(error => {
@@ -68,6 +71,14 @@ const SignIn = () => {
             })
 
     }
+
+    useEffect(() => {
+        if (registrationSuccess) {
+            setTimeout(() => {
+                navigate("/login");
+            }, 1000);
+        }
+    }, [registrationSuccess, navigate]);
 
     return (
         <div className="min-h-[50%]  mb-5 bg-cover bg-center " style={{ backgroundImage: `url('https://i.ibb.co/YfLNcNz/pexels-jaime-reimer-1376930-2662116.jpg ')` }}>

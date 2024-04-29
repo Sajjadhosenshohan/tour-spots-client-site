@@ -8,13 +8,12 @@ const AllTourists = () => {
     // loader
     const LoadInfo = useLoaderData();
     const [allTourSpot, setAllTourSpot] = useState(LoadInfo)
-
     console.log(allTourSpot)
+
+
 
     // state
     const [tours, setTours] = useState(allTourSpot);
-
-
 
     const handleFilter = (filterType) => {
 
@@ -43,10 +42,10 @@ const AllTourists = () => {
 
 
     return (
-        <div className="mt-12 mb-24">
-            <div className="text-center mb-12 mx-auto w-1/2 md:w-full">
+        <div className="mt-12 mb-24 ">
+            <div className="text-center  mx-auto w-2/3 md:w-full">
                 <h2 className="font-bold text-4xl mb-3 " >Explore All Tourist Spot</h2>
-                <p>Discover new adventures around the globe.</p>
+                <p>Discover new adventures around the global.</p>
             </div>
 
             {/* button  */}

@@ -15,7 +15,7 @@ const ViewDetails = () => {
     const [details, setDetails] = useState({});
 
     useEffect(() => {
-        fetch(`https://travel-server-virid.vercel.app/views/${id}`)
+        fetch(`http://localhost:5000/views/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -27,22 +27,22 @@ const ViewDetails = () => {
 
     return (
         <div className="border-[rgba(18,19,45,0.15)] border relative  rounded overflow-hidden shadow-lg m-4 p-6">
-            <div className=" flex gap-6">
+            <div className=" flex flex-col md:flex-row gap-6">
 
                 <div className="flex items-center justify-center">
                     <img src={image} alt="Siem Reap" className="w-full h-48 object-cover" />
 
-                    <span className="absolute top-0 right-0 bg-red-400 rounded-sm p-2">{country_Name}</span>
+                    {/* <span className="absolute top-0 right-3/4 bg-red-400 rounded-sm p-2">{country_Name}</span> */}
                 </div>
 
 
-                <div className="border-primary border-dotted border-l-2 pl-6">
+                <div className="border-primary  border-b-2  pt-6  md:border-l-2  md:border-b-0 md:pt-0   md:pl-6">
                     <div className="font-bold text-xl flex gap-2 items-center mb-2">
                         <span className=" text-primary"><FaGlobe /></span>
 
-                        <span className="absolute top-0 right-0 bg-red-400 rounded-sm p-2">{country_Name}</span>
+                        <span className="absolute top-0 hidden md:block md:right-0  bg-red-400 rounded-sm p-2 ">{country_Name}</span>
 
-                        <span>{tourists_spot_name}</span>
+                        <span>{country_Name}</span>
                     </div>
 
                     <h2 className="w-2/3 mb-4">{short_description}</h2>
@@ -52,7 +52,7 @@ const ViewDetails = () => {
                         <div className="flex gap-2 items-center  justify-start mb-2">
                             <FaLocationDot className=" text-primary" />
                             <p className="text-gray-700  ">
-                                {`${country_Name}`}</p>
+                                {`${tourists_spot_name}`}</p>
                         </div>
 
                         <div className="flex gap-2 items-center  justify-start mb-2">

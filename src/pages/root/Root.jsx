@@ -8,9 +8,9 @@ const Root = () => {
     // const navigation = useNavigation()
     
     return (
-        <div className="max-w-[85%] mx-auto ">
+        <div className="max-w-[85%] mx-auto space-y-8 md:space-y-12 rounded-lg ">
             <Nav></Nav>
-            <Outlet></Outlet>
+            <Outlet ></Outlet>
             <Footer></Footer>
         </div>
     );

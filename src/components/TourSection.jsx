@@ -6,9 +6,9 @@ const TourSection = ({tourInfos, setTourInfos}) => {
     
 
     return (
-        <div className="my-24">
-            <div className="text-center mb-12 mx-auto w-1/2 md:w-full">
-                <h2 className="font-bold text-4xl mb-3 animate__animated animate__bounce" >Discover Latest Tourists Spots</h2>
+        <div className="mt-24">
+            <div className="text-center mb-12 mx-auto w-2/3 md:w-full">
+                <h2 className="font-bold text-2xl md:text-4xl mb-3 " >Discover Latest Tourists Spots</h2>
                 <p>Treat yourself with a journey to your inner self. We promise, you’ll enjoy every step you make.</p>
             </div>
 

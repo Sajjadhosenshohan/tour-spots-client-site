@@ -10,10 +10,8 @@ const SignUp = () => {
     
     const [showPass, setShowPass] = useState(false);
     const { createUser, logout } = useContext(AuthContext);
-    const [error, setError] = useState('');
+    const [error, setError] = useState();
 
-    // const location = useLocation()
-    // console.log('location', location);
     const navigate = useNavigate()
 
 

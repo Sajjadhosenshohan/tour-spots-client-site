@@ -6,7 +6,7 @@ import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({children}) => {
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState([])
     console.log(user)
 
     const [reload, setReload] = useState(false)
@@ -29,6 +29,7 @@ const AuthProvider = ({children}) => {
     //       })
           
     // }
+    console.log("auth",loading)
 
 
     // sign in user
@@ -57,11 +58,11 @@ const AuthProvider = ({children}) => {
     // observer
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setLoading(false)
+            if (user) {  
                 setUser(user)
-
             }
+
+            setLoading(false)
         });
 
         return () => {

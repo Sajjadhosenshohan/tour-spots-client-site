@@ -4,6 +4,8 @@ import Banner from "../../components/Banner";
 import TourSection from "../../components/TourSection";
 import { useState } from "react";
 import Countries from "../../components/Countries";
+import WhyChooseUs from "../../components/WhyChooseUs";
+import CustomarReview from "../../components/CustomarReview";
 
 const Home = () => {
     const LoadInfo = useLoaderData();
@@ -12,13 +14,17 @@ const Home = () => {
     return (
         <div className="mt-12">
             <Banner></Banner>
-
+            
             <TourSection 
             tourInfos={tourInfos}
             setTourInfos={setTourInfos}>
             </TourSection>
 
+            <WhyChooseUs></WhyChooseUs>
+
             <Countries></Countries>
+
+            <CustomarReview></CustomarReview>
         </div>
 
     );

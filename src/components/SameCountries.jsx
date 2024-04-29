@@ -1,36 +1,69 @@
-import { FaGlobe } from "react-icons/fa6";
-import { MdFlightTakeoff } from "react-icons/md";
+
+import { GiTakeMyMoney } from "react-icons/gi";
+import { MdTour } from "react-icons/md";
+import { TiWeatherPartlySunny } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
-const SameCountries = ({detail}) => {
+const SameCountries = ({ detail }) => {
 
-    const { country_Name, description, image } = detail
+    const { _id, tourists_spot_name, location, average_cost, totalVisitorsPerYear, travel_time, seasonality, image, country_Name, short_description } = detail
+
+    // console.log(allTour)
+
 
     return (
-        <div className="relative flex flex-col rounded overflow-hidden shadow-lg m-4">
-            <div>
-                <img src={image} alt="Siem Reap" className="relative w-full h-48 object-cover" />
-                <p className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-extrabold text-white text-3xl">{country_Name}</p>
 
+        <div className="relative  rounded overflow-hidden shadow-lg m-4">
+            <img src={image} alt="Siem Reap" className="w-full h-48 object-cover" />
 
-            </div>
+            <span className="absolute top-0 right-0 bg-red-400 rounded-sm p-2">{average_cost}</span>
 
-            <span className="absolute top-0 right-0 bg-white  rounded-full p-3 w-12 h-12 font-bold text-4xl text-[#F42B6F] flex justify-center items-center ">
-                <MdFlightTakeoff />
-            </span>
+            <div className="px-6 py-4 space-y-4">
+                <div>
+                    <div className="font-bold text-xl mb-2">{country_Name}</div>
+                    <div className="font-bold text-xl mb-2">{tourists_spot_name}</div>
+                </div>
+                <div className="font-bold text-xl mb-2">{location}</div>
+                <p className="">{short_description}</p>
 
-            <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2 flex items-center ">
-                    <span className="mr-3 text-primary"><FaGlobe /></span> {country_Name}
+                {/* <div className="flex gap-2 items-center  justify-start mb-2">
+                    <FaLocationDot className=" text-primary" />
+                    <p className="text-gray-700 text-base ">{`${location}, ${country_Name}`}</p>
+                </div> */}
+                <div className="flex gap-2 items-center  justify-start mb-2">
+                    <GiTakeMyMoney className=" text-primary" />
+                    <p className="text-gray-700">Average_cost: {average_cost}</p>
                 </div>
 
-                <p className="mb-4">{description}</p>
+                <div className="mb-4">
+                    {/* <p className="text-gray-700">Average Cost: {average_cost}</p> */}
 
-                <Link to={`/target/${country_Name}`}>
+                    <div className="flex gap-2 items-center  justify-start mb-2">
+                        <TiWeatherPartlySunny className=" text-primary" />
+                        <p className="text-gray-700">TotalVisitorsPerYear: {totalVisitorsPerYear}</p>
+                    </div>
+                    {/* _______________ */}
+
+                    <div className="flex gap-2 items-center  justify-start mb-2">
+                        <TiWeatherPartlySunny className=" text-primary" />
+                        <p className="text-gray-700">Seasonality: {seasonality}</p>
+                    </div>
+                    {/* ____________ */}
+
+                    <div className="flex gap-2 items-center  justify-start mb-2">
+                        <MdTour className=" text-primary" />
+                        <p className="text-gray-700">Travel time: {travel_time}</p>
+                    </div>
+
+                    {/* <p className="text-gray-700">Travel Time: {travel_time}</p> */}
+
+                </div>
+                <Link to={`/viewDetails/${_id}`}>
                     <button className="bg-primary hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full text-center">View details</button>
                 </Link>
             </div>
         </div>
+
     );
 };
 

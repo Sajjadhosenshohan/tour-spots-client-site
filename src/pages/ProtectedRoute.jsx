@@ -6,12 +6,14 @@ const ProtectedRoute = ({children}) => {
 
     const {user, loading} = useContext(AuthContext)
     const location = useLocation()
-    console.log(location)
+    console.log(location.pathname)
 
+    console.log(loading)
     if(loading) {
-         <div className="flex items-center justify-center my-[150px]">
+        return <div className="flex items-center justify-center my-[150px]">
             <div className="md:w-28 md:h-28 w-12 h-12 border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
         </div>
+       
     }
 
     if (user) {

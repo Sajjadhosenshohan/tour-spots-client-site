@@ -38,7 +38,7 @@ const Update = () => {
 
 
 
-        fetch(`https://travel-server-virid.vercel.app/update/${_id}`, {
+        fetch(`http://localhost:5000/update/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -58,13 +58,14 @@ const Update = () => {
                         confirmButtonText: 'Cool'
                     })
                 }
-                
+
             })
 
     }
     return (
-        <div className=" md:p-24 bg-green-200 rounded-lg">
-            <h1 className='text-4xl  font-bold text-center mb-6 '>Update Form</h1>
+        <div className="p-4 md:p-16 lg:p-24  bg-[#F4F3F0]
+        rounded-lg">
+            <h1 className='text-2xl md:text-4xl mx-auto  font-bold text-center mb-6 w-2/3 md:w-full'>Update Tourists Spot Form</h1>
             {/* <p>{id}</p> */}
             <form onSubmit={handleUpdate} className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -98,9 +99,9 @@ const Update = () => {
                     <label className="label">
                         <span>country_Name</span>
                     </label>
-                    <input type="text" placeholder="country_Name" 
-                    defaultValue={country_Name} 
-                    name="country_Name" className="input input-bordered w-full" />
+                    <input type="text" placeholder="country_Name"
+                        defaultValue={country_Name}
+                        name="country_Name" className="input input-bordered w-full" />
                 </div>
 
                 {/* location*/}
@@ -109,8 +110,8 @@ const Update = () => {
                         <span>location</span>
                     </label>
                     <input type="text" placeholder="location"
-                    defaultValue={location}  
-                    name="location" className="input input-bordered w-full" />
+                        defaultValue={location}
+                        name="location" className="input input-bordered w-full" />
                 </div>
 
                 {/* average_cost*/}
@@ -118,9 +119,9 @@ const Update = () => {
                     <label className="label">
                         <span>average_cost</span>
                     </label>
-                    <input type="text" placeholder="average_cost" 
-                    defaultValue={average_cost} 
-                    name="average_cost" className="input input-bordered w-full" />
+                    <input type="text" placeholder="average_cost"
+                        defaultValue={average_cost}
+                        name="average_cost" className="input input-bordered w-full" />
                 </div>
 
                 {/* TotalVisitorsPerYear*/}
@@ -128,9 +129,9 @@ const Update = () => {
                     <label className="label">
                         <span>totalVisitorsPerYear</span>
                     </label>
-                    <input type="text" placeholder="totalVisitorsPerYear" 
-                    defaultValue={totalVisitorsPerYear} 
-                    name="totalVisitorsPerYear" className="input input-bordered w-full" />
+                    <input type="text" placeholder="totalVisitorsPerYear"
+                        defaultValue={totalVisitorsPerYear}
+                        name="totalVisitorsPerYear" className="input input-bordered w-full" />
                 </div>
 
 
@@ -141,8 +142,8 @@ const Update = () => {
                         <span>travel_time</span>
                     </label>
                     <input type="text" placeholder="travel_time"
-                    defaultValue={travel_time} 
-                     name="travel_time" className="input input-bordered w-full" />
+                        defaultValue={travel_time}
+                        name="travel_time" className="input input-bordered w-full" />
                 </div>
 
 
@@ -168,9 +169,9 @@ const Update = () => {
                     <label className="label">
                         <span>short description</span>
                     </label>
-                    <textarea type="text" placeholder="short description" 
-                    defaultValue={short_description} 
-                    name="short_description" className="input input-bordered w-full" />
+                    <textarea type="text" placeholder="short description"
+                        defaultValue={short_description}
+                        name="short_description" className="input input-bordered w-full" />
                 </div>
 
 
@@ -179,15 +180,16 @@ const Update = () => {
                     <label className="label">
                         <span>Image </span>
                     </label>
-                    <input type="text" placeholder="image" name="image" 
-                    defaultValue={image} 
-                    className="input input-bordered w-full" />
+                    <input type="text" placeholder="image" name="image"
+                        defaultValue={image}
+                        className="input input-bordered w-full" />
                 </div>
 
                 {/* button */}
-                <input type="submit"  value="Update now" className="w-full col-span-2 font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center" />
+                <div className="col-span-1 md:col-span-2 ">
 
-                {/* <input type="submit"  value="Add Tourists Spot" className="w-full col-span-2 font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center" /> */}
+                    <input type="submit" value="Update Tourist spot" className="w-full font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center" />
+                </div>
             </form>
         </div>
     );

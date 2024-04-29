@@ -6,12 +6,14 @@ import { Link } from "react-router-dom";
 
 const MyList = () => {
 
-    const { user , setReload} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
+
+    console.log("mail", user.email)
 
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        fetch(`https://travel-server-virid.vercel.app/myList/${user?.email}`)
+        fetch(`http://localhost:5000/myList/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -31,13 +33,13 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://travel-server-virid.vercel.app/delete/${_id}`, {
+                fetch(`http://localhost:5000/delete/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
                     .then(data => {
                         console.log(data)
-                        setReload(true)
+                        
                         
                         if (data.deletedCount > 0) {
                             Swal.fire({
@@ -48,7 +50,7 @@ const MyList = () => {
 
                             const remaining = details.filter(d => d._id !== _id)
                             setDetails(remaining)
-                            setReload(false)
+                            
                             
                         }
                     })
@@ -58,8 +60,8 @@ const MyList = () => {
 
 
     return (
-        <div className="mt-12 mb-24">
-            <h1 className="mb-12 text-xl text-center font-bold">My list: <span className="bg-primary px-3 rounded font-normal">{details.length}</span></h1>
+        <div className="mt-12 mb-24 p-4  lg:p-24 bg-[#f4f3f0]">
+            <h1 className="mb-12 text-xl md:text-3xl text-center font-bold">My list: <span className="bg-primary px-3 rounded font-normal">{details.length}</span></h1>
 
             <div>
                 <div className="overflow-x-auto ">

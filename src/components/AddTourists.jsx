@@ -4,7 +4,7 @@ import { AuthContext } from "../Firebase/AuthProvider";
 
 const AddTourists = () => {
     const { user } = useContext(AuthContext)
-   
+
 
     const handleAddTour = event => {
         event.preventDefault();
@@ -26,7 +26,7 @@ const AddTourists = () => {
 
         const booking = { name, email, tourists_spot_name, country_Name, location, average_cost, totalVisitorsPerYear, travel_time, seasonality, short_description, image }
 
-        fetch(`https://travel-server-virid.vercel.app/allTour`, {
+        fetch(`http://localhost:5000/allTour`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -78,8 +78,9 @@ const AddTourists = () => {
     //     confirmButtonText: 'Cool'
     //   })
     return (
-        <div className=" md:p-24 bg-green-200 rounded-lg">
-            <h1 className='text-4xl  font-bold text-center mb-6 '>Add Tourists Spot Form</h1>
+        <div className="p-4 md:p-16 lg:p-24  bg-[#F4F3F0]
+        rounded-lg">
+            <h1 className='text-2xl md:text-4xl mx-auto  font-bold text-center mb-6 w-2/3 md:w-full'>Add Tourists Spot Form</h1>
 
             <form onSubmit={handleAddTour} className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
@@ -108,8 +109,8 @@ const AddTourists = () => {
                     <input type="text" placeholder="tourists_spot_name" name="tourists_spot_name" className="input input-bordered w-full " />
                 </div>
 
-               {/* country_Name */}
-               <div className="">
+                {/* country_Name */}
+                <div className="">
                     <label className="label">
                         <span>Country_Name</span>
                     </label>
@@ -161,7 +162,7 @@ const AddTourists = () => {
 
 
                 {/* seasonality */}
-                <div className="md:col-span-2">
+                <div className="col-span-1 md:col-span-2">
                     <label className="label">
                         <span>Seasonality</span>
                     </label>
@@ -177,7 +178,7 @@ const AddTourists = () => {
 
 
                 {/* short description*/}
-                <div className="  md:col-span-2">
+                <div className="col-span-1  md:col-span-2">
                     <label className="label">
                         <span>short description</span>
                     </label>
@@ -186,7 +187,7 @@ const AddTourists = () => {
 
 
                 {/* image */}
-                <div className="  md:col-span-2">
+                <div className="col-span-1  md:col-span-2">
                     <label className="label">
                         <span>Image </span>
                     </label>
@@ -194,9 +195,11 @@ const AddTourists = () => {
                 </div>
 
                 {/* button */}
-               
-                    <input type="submit"  value="Add Tourists Spot" className="w-full col-span-2 font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center" />
-                
+                <div className="col-span-1 md:col-span-2 ">
+
+                    <input type="submit" value="Add Tourists Spot" className="w-full font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center" />
+                </div>
+
             </form>
         </div>
     );

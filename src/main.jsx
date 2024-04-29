@@ -26,7 +26,7 @@ import Error from './pages/Error/Error';
 // import TourSection from './components/TourSection';
 
 
-// https://travel-server-virid.vercel.app
+// http://localhost:5000
 
 const router = createBrowserRouter([
   {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch(`https://travel-server-virid.vercel.app/allTour`)
+        loader: () => fetch(`http://localhost:5000/allTour`)
 
       },
       {
@@ -49,26 +49,22 @@ const router = createBrowserRouter([
       },
       {
         path: "/viewDetails/:id",
-        element: <ProtectedRoute>
-          <ViewDetails></ViewDetails>
-        </ProtectedRoute>,
-        // loader: ({params})=> fetch(`https://travel-server-virid.vercel.app/views/${params.id}`)
+        element: <ProtectedRoute><ViewDetails></ViewDetails></ProtectedRoute>,
+        // loader: ({params})=> fetch(`http://localhost:5000/views/${params.id}`)
       },
       {
         path: "/allTour",
         element: <AllTourists></AllTourists>,
-        loader: () => fetch(`https://travel-server-virid.vercel.app/allTour`)
+        loader: () => fetch(`http://localhost:5000/allTour`)
       },
       {
         path: "/myList",
-        element: <ProtectedRoute>
-          <MyList></MyList>
-        </ProtectedRoute>
+        element: <ProtectedRoute><MyList></MyList></ProtectedRoute>
       },
       {
         path: "/updateForm/:id",
         element: <Update></Update>,
-        loader: ({ params }) => fetch(`https://travel-server-virid.vercel.app/update/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
       },
       {
         path: "/signIn",
@@ -81,13 +77,11 @@ const router = createBrowserRouter([
       {
         path: "/countriesData",
         element: <Countries></Countries>,
-        // loader: ()=>fetch(`https://travel-server-virid.vercel.app/countriesData/`)
+        // loader: ()=>fetch(`http://localhost:5000/countriesData/`)
       },
       {
         path: "/target/:country_Name",
-        element: <ProtectedRoute>
-          <TargetCountry></TargetCountry>
-        </ProtectedRoute>
+        element: <ProtectedRoute><TargetCountry></TargetCountry></ProtectedRoute>
       }
     ]
   },

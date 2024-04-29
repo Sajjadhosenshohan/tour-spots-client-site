@@ -7,7 +7,7 @@ const Countries = () => {
     const [countries, setCountries] = useState([])
     
     useEffect(()=>{
-        fetch(`https://travel-server-virid.vercel.app/countriesData`)
+        fetch(`http://localhost:5000/countriesData`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -15,8 +15,8 @@ const Countries = () => {
         })
     },[])
     return (
-        <div className="my-24">
-            <div className="text-center mb-12 mx-auto w-1/2 md:w-full">
+        <div className="mt-24">
+            <div className="text-center mb-12 mx-auto w-2/3 md:w-full">
                 <h2 className="font-bold text-4xl mb-3 animate__animated animate__bounce" >Find Your Dream Country</h2>
                 <p>you like peaceful destinations or vibrant landscapes, we have offers for you.</p>
             </div>
