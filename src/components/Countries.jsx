@@ -8,7 +8,7 @@ const Countries = () => {
     const [countries, setCountries] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/countriesData`)
+        fetch(`https://travel-server-virid.vercel.app/countriesData`)
             .then(res => res.json())
             .then(data => {
                 

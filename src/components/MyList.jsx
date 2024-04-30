@@ -15,7 +15,7 @@ const MyList = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myList/${user?.email}`)
+        fetch(`https://travel-server-virid.vercel.app/myList/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -35,7 +35,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/delete/${_id}`, {
+                fetch(`https://travel-server-virid.vercel.app/delete/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
