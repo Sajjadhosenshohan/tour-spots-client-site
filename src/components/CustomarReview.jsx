@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import { FaStar } from "react-icons/fa6";
 
 
@@ -6,13 +7,15 @@ const CustomarReview = () => {
     return (
         <div className="my-24">
             <div className="text-center mb-12 mx-auto w-2/3">
-                <h2 className="font-bold text-4xl mb-3 animate__animated animate__bounce" >Customer reviews</h2>
-                <p>Encourage customer reviews on social media by creating communities where customers are empowered to share their experiences or purchases properties</p>
+                <Fade direction="left">
+                    <h2 className="font-bold text-4xl mb-3 " >Customer reviews</h2>
+                    <p>Encourage customer reviews on social media by creating communities where customers are empowered to share their experiences or purchases properties</p>
+                </Fade>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 {/* review 1 */}
-                <div data-aos="fade-down" className="container flex flex-col w-full max-w-lg  mx-auto divide-y shadow-lg rounded-lg overflow-hidden border-2">
+                <div data-aos="fade-down" className="container flex flex-col w-full max-w-lg  mx-auto divide-y shadow-lg rounded-lg overflow-hidden border-2 dark:bg-[#f4f3f0] dark:text-gray-800">
                     <div className="p-4 pb-0">
                         <div className="mb-3">
                             <img src="https://i.ibb.co/kh47drG/pexels-olly-914927.jpg" alt="Reviewer's Name" className="object-cover w-12 h-12 rounded-full " />
@@ -41,10 +44,10 @@ const CustomarReview = () => {
                     </div>
                 </div>
                 {/* review 2 */}
-                <div data-aos="fade-down"  className="container flex flex-col w-full max-w-lg  mx-auto divide-y  shadow-lg rounded-lg overflow-hidden border-2">
+                <div data-aos="fade-down" className="container flex flex-col w-full max-w-lg  mx-auto divide-y  shadow-lg rounded-lg overflow-hidden border-2 dark:bg-[#f4f3f0] dark:text-gray-800">
                     <div className="p-4 pb-0  ">
                         <div className="mb-3">
-                        <img src="https://i.ibb.co/SJXbyDq/pexels-olly-840996.jpg" alt="Reviewer's Name" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
+                            <img src="https://i.ibb.co/SJXbyDq/pexels-olly-840996.jpg" alt="Reviewer's Name" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
                         </div>
 
                         <div className="flex justify-between">
@@ -70,10 +73,10 @@ const CustomarReview = () => {
                     </div>
                 </div>
                 {/* review 3 */}
-                <div data-aos="fade-down" className="container flex flex-col w-full max-w-lg  mx-auto divide-y  shadow-lg rounded-lg overflow-hidden border-2">
+                <div data-aos="fade-down" className="container flex flex-col w-full max-w-lg  mx-auto divide-y  shadow-lg rounded-lg overflow-hidden border-2 dark:bg-[#f4f3f0] dark:text-gray-800">
                     <div className="p-4 pb-0  ">
                         <div className="mb-3">
-                        <img src="https://i.ibb.co/ry0MtGQ/pexels-italo-melo-881954-2379004.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
+                            <img src="https://i.ibb.co/ry0MtGQ/pexels-italo-melo-881954-2379004.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
                         </div>
 
                         <div className=" flex justify-between">
@@ -103,7 +106,7 @@ const CustomarReview = () => {
             </div>
         </div>
     );
-    
+
 };
 
 export default CustomarReview;

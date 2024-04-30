@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Firebase/AuthProvider";
+import { Fade } from "react-awesome-reveal";
 
 const AddTourists = () => {
     const { user } = useContext(AuthContext)
 
-
+    console.log("user ace", user)
     const handleAddTour = event => {
         event.preventDefault();
         const form = event.target
@@ -39,8 +40,8 @@ const AddTourists = () => {
                 console.log(data)
                 if (data.insertedId.length > 0) {
                     Swal.fire({
-                        title: 'success!',
-                        text: 'Do you want to continue',
+                        title: 'Success!',
+                        text: 'SuccessFully Added To Your List',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
@@ -71,16 +72,13 @@ const AddTourists = () => {
         // })
     }
 
-    // Swal.fire({
-    //     title: 'Error!',
-    //     text: 'Do you want to continue',
-    //     icon: 'error',
-    //     confirmButtonText: 'Cool'
-    //   })
+
     return (
         <div className="p-4 md:p-16 lg:p-24  bg-[#F4F3F0]
         rounded-lg">
-            <h1 className='text-2xl md:text-4xl mx-auto  font-bold text-center mb-6 w-2/3 md:w-full'>Add Tourists Spot Form</h1>
+            <Fade direction="left">
+                <h1 className='text-2xl md:text-4xl mx-auto  font-bold text-center mb-6 w-2/3 md:w-full dark:text-black'>Add Tourists Spot Form</h1>
+            </Fade>
 
             <form onSubmit={handleAddTour} className="grid grid-cols-1 md:grid-cols-2 gap-4">
 

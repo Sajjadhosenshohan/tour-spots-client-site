@@ -26,7 +26,7 @@ const ViewDetails = () => {
     const { tourists_spot_name, country_Name, location, average_cost, totalVisitorsPerYear, travel_time, seasonality, short_description, image } = details
 
     return (
-        <div className="border-[rgba(18,19,45,0.15)] border relative  rounded overflow-hidden shadow-lg m-4 p-6">
+        <div className=" relative  rounded overflow-hidden shadow-lg m-4 p-6  dark:bg-[#f4f3f0] dark:text-gray-800">
             <div className=" flex flex-col md:flex-row gap-6">
 
                 <div className="flex items-center justify-center">

@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import { Link,  useNavigate, } from "react-router-dom";
 import { AuthContext } from "../../Firebase/AuthProvider";
 import { FaEyeSlash, FaRegEye } from "react-icons/fa";
+import { Fade } from "react-awesome-reveal";
 const SignUp = () => {
     
     const [showPass, setShowPass] = useState(false);
@@ -54,7 +55,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className="min-h-[50%]  mb-5 bg-cover bg-center " style={{ backgroundImage: `url('https://i.ibb.co/GdDCf18/pexels-freestockpro-2166553.jpg')` }}>
+        <div className="min-h-[50%] flex justify-center mb-5 bg-cover bg-center " style={{ backgroundImage: `url('https://i.ibb.co/GdDCf18/pexels-freestockpro-2166553.jpg')` }}>
 
         {/* <Helmet>
             <title>My-Home-Estate | Register</title>
@@ -65,7 +66,9 @@ const SignUp = () => {
 
 
             <div className="card shrink-0 w-full  max-w-md shadow-2xl   backdrop-blur-md bg-white/30">
-                <h1 className="text-2xl lg:text-5xl font-bold text-center mb-4 mt-4 animate__animated animate__bounceInLeft animation-duration: 2s ">Resister Now!</h1>
+                <Fade direction="left">
+                <h1 className="text-2xl lg:text-5xl font-bold text-center mb-4 mt-4 animate__animated animate__bounceInLeft animation-duration: 2s px-4">Resister Now!</h1>
+                </Fade>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 

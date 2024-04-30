@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 // import { AuthContext } from "../Firebase/AuthProvider";
 import { useParams } from "react-router-dom";
 import SameCountries from "./SameCountries";
+import { Fade } from "react-awesome-reveal";
 
 const TargetCountry = () => {
 
@@ -49,18 +50,6 @@ const TargetCountry = () => {
     // const [countryData, setCountryData] = useState([]);
     const [tourData, setTourData] = useState([]);
 
-    // useEffect(() => {
-    //     // Fetch data from countriesData endpoint
-    //     fetch(`http://localhost:5000/countriesData`)
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             // Filter country data based on country name
-    //             const filteredData = data.filter(item => item.country_Name === country_Name);
-    //             setCountryData(filteredData);
-    //         })
-    //         .catch(error => console.error('Error fetching country data:', error));
-    // }, [country_Name]);
-
     useEffect(() => {
         // Fetch data from allTour endpoint
         fetch(`http://localhost:5000/allTour`)
@@ -73,11 +62,14 @@ const TargetCountry = () => {
             .catch(error => console.error('Error fetching tour data:', error));
     }, [country_Name]);
     return (
-        <div className="bg-[#f4f3f0]">
+        <div className="dark:bg-[#f4f3f0] dark:text-gray-800">
 
-            <div className="text-center font-bold text-3xl py-6">
-                Tourist Places In: <span className="text-primary">{country_Name}</span>
+            <div className="text-center font-bold text-3xl py-6 flex justify-center">
+                <Fade direction="left">
+                    Tourist Places In: <span className="text-primary">{country_Name}</span>
 
+                </Fade>
+                
                 <span className="bg-primary px-2 rounded font-normal ml-3">{tourData.length}</span>
             </div>
 

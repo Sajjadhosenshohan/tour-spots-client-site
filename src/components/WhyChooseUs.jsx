@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import { CgGym } from "react-icons/cg";
 import { FaBiking } from "react-icons/fa";
 import { FaPersonSwimming, FaWifi } from "react-icons/fa6";
@@ -11,15 +12,17 @@ const WhyChooseUs = () => {
             <div className="container mx-auto">
 
                 <div className="text-center mb-12 mx-auto w-2/3 md:w-full">
-                    <h2 className="font-bold text-4xl mb-3 " >Why Travel with Us?</h2>
-                    <p> Join us on an adventure of a lifetime and discover why travelers around the globe trust us to make their journeys extraordinary.</p>
+                    <Fade direction="left">
+                        <h2 className="font-bold text-4xl mb-3 " >Why Travel with Us?</h2>
+                        <p> Join us on an adventure of a lifetime and discover why travelers around the globe trust us to make their journeys extraordinary.</p>
+                    </Fade>
                 </div>
 
 
                 <div className="grid gap-6 my-16 lg:grid-cols-3 ">
 
                     {/* 1 */}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg">
+                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
                         <div className="w-2/3  flex justify-center">
                             <MdOutlineSecurity className="text-primary font-bold text-4xl" />
                         </div>
@@ -33,7 +36,7 @@ const WhyChooseUs = () => {
                     </div>
 
                     {/* 2 */}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg">
+                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
                         <div className="w-2/3  flex justify-center">
                             <FaWifi className="text-primary font-bold text-4xl" />
                         </div>
@@ -47,7 +50,7 @@ const WhyChooseUs = () => {
                     </div>
 
                     {/* 3*/}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg">
+                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
                         <div className="w-2/3  flex justify-center">
                             <GiSolarPower className="text-primary font-bold text-4xl" />
                         </div>
@@ -60,7 +63,7 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                     {/* 4 */}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg">
+                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
                         <div className="w-2/3  flex justify-center">
                             <FaBiking className="text-primary font-bold text-4xl" />
                         </div>
@@ -73,7 +76,7 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                     {/* 5*/}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg">
+                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
                         <div className="w-2/3  flex justify-center">
                             <FaPersonSwimming className="text-primary font-bold text-4xl" />
                         </div>
@@ -86,7 +89,7 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                     {/* 6*/}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg">
+                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
                         <div className="w-2/3  flex justify-center">
                             <CgGym className="text-primary font-bold text-4xl" />
                         </div>

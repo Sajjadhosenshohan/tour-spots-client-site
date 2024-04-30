@@ -18,7 +18,7 @@ const Nav = () => {
 
 
 
-    console.log(user);
+    console.log("navbar a user ??", user);
 
     const handleToggle = (e) => {
         if (e.target.checked) {
@@ -85,11 +85,11 @@ const Nav = () => {
                         <label tabIndex={0} className="btn btn-ghost lg:hidden pr-1">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex={0} className=" menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className=" menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow  rounded-box w-52 dark:text-gray-800">
                             {Links}
                         </ul>
                     </div>
-                    <Link to='/' className=" flex items-center md:font-bold  ml-2 md:text-3xl ">
+                    <Link to='/' className=" flex items-center md:font-bold  ml-1 md:text-3xl ">
                         {/* <HiHome className="text-primary" /> */}
 
 
@@ -99,7 +99,7 @@ const Nav = () => {
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 dark:text-gray-800">
                         {Links}
                     </ul>
                 </div>
@@ -154,13 +154,13 @@ const Nav = () => {
 
                         </div>
                             :
-                            <div className="space-x-2">
+                            <div className="flex space-x-2">
                                 <Link to='/signIn' >
-                                    <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">Login</button>
+                                    <button className="font-medium text-white text-base md:text-xl md:pb-2 md:px-4 py-1 px-1 rounded-lg bg-primary text-center">Login</button>
 
                                 </Link>
                                 <Link to='/SignUp' >
-                                    <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">Register</button>
+                                    <button className="font-medium text-white text-base md:text-xl md:pb-2 md:px-4 py-1 px-1 rounded-lg bg-primary text-center">Register</button>
 
                                 </Link>
                             </div>

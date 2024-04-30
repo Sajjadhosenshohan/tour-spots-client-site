@@ -9,7 +9,7 @@ const SingleCardByUser = ({ tour }) => {
 
     console.log(tour)
     return (
-        <div className="relative  rounded overflow-hidden shadow-lg m-4">
+        <div className="relative  rounded overflow-hidden shadow-lg m-4 dark:bg-[#f4f3f0] dark:text-gray-800">
             <img src={image} alt="Siem Reap" className="w-full h-48 object-cover" />
 
             <span className="absolute top-0 right-0 bg-red-400 rounded-sm p-2">{country_Name}</span>
@@ -19,7 +19,7 @@ const SingleCardByUser = ({ tour }) => {
 
                 <div className="flex gap-2 items-center  justify-start mb-2">
                     <FaLocationDot className=" text-primary" />
-                    <p className="text-gray-700 text-base ">{`${location}, ${country_Name}`}</p>
+                    <p className=" text-base ">{`${location}, ${country_Name}`}</p>
                 </div>
 
                 <div className="mb-4">
@@ -27,19 +27,19 @@ const SingleCardByUser = ({ tour }) => {
 
                     <div className="flex gap-2 items-center  justify-start mb-2">
                         <TiWeatherPartlySunny className=" text-primary" />
-                        <p className="text-gray-700">Average_cost: {average_cost}</p>
+                        <p className="text-base ">Average_cost: {average_cost}</p>
                     </div>
                     {/* _______________ */}
 
                     <div className="flex gap-2 items-center  justify-start mb-2">
                         <GiTakeMyMoney  className=" text-primary" />
-                        <p className="text-gray-700">Seasonality: {seasonality}</p>
+                        <p className="text-base ">Seasonality: {seasonality}</p>
                     </div>
                     {/* ____________ */}
 
                     <div className="flex gap-2 items-center  justify-start mb-2">
                         <MdTour  className=" text-primary" />
-                        <p className="text-gray-700">Travel time: {travel_time}</p>
+                        <p className="text-base ">Travel time: {travel_time}</p>
                     </div>
 
                     {/* <p className="text-gray-700">Travel Time: {travel_time}</p> */}

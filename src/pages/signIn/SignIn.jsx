@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate, } from "react-router-dom";
 import { AuthContext } from "../../Firebase/AuthProvider";
 import { FaEyeSlash, FaRegEye } from "react-icons/fa";
+import { Fade } from "react-awesome-reveal";
 
 const SignIn = () => {
     const [showPass, setShowPass] = useState(false);
@@ -81,7 +82,7 @@ const SignIn = () => {
     }, [registrationSuccess, navigate]);
 
     return (
-        <div className="min-h-[50%]  mb-5 bg-cover bg-center " style={{ backgroundImage: `url('https://i.ibb.co/YfLNcNz/pexels-jaime-reimer-1376930-2662116.jpg ')` }}>
+        <div className="min-h-[50%] flex justify-center  mb-5 bg-cover bg-center " style={{ backgroundImage: `url('https://i.ibb.co/YfLNcNz/pexels-jaime-reimer-1376930-2662116.jpg ')` }}>
 
             {/* <Helmet>
                 <title>My-Home-Estate | Login</title>
@@ -89,7 +90,9 @@ const SignIn = () => {
             <div className="hero-content flex-col ">
 
                 <div className="card shrink-0 w-full max-w-md shadow-2xl   backdrop-blur-md bg-white/30">
-                    <h1 className="text-2xl lg:text-5xl font-bold text-center mb-4 mt-4 animate__animated animate__bounceInLeft animation-duration: 2s ">Login Now!</h1>
+                    <Fade direction="left">
+                    <h1 className="text-2xl lg:text-5xl font-bold text-center mb-4 mt-4  px-4">Login Now!</h1>
+                    </Fade>
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body ">
 
                         {/* email */}

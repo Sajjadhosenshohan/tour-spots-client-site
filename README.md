@@ -1,8 +1,22 @@
-# React + Vite
+# GoWilds
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Link
 
-Currently, two official plugins are available:
+- [https://tour-2b613.web.app/](https://tour-2b613.web.app/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Npm Package Name list:
+- React Tooltip,
+- React Simple Typewriter,
+
+
+## Features 
+
+- **Easy Navigation**: Simple design for Home,Add Tourist spots , All Tourist spots, signIn, SignUp and My list  sections.
+- **Destination Listings**: Categorized  listings for Each country.
+- **Buyer/Seller Review**: Good Review form buyers and sellers.
+- **My List and Update form Options**: Client can easily add there tourist spots using form.
+- **User Registration and Login**: Secure login for accessing estate listings.
+
+## License
+
+Specify the project's license.

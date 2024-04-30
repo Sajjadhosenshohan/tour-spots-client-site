@@ -1,4 +1,4 @@
-import { FaFlag, FaGlobe } from "react-icons/fa6";
+import {  FaGlobe } from "react-icons/fa6";
 // import { MdFlightTakeoff } from "react-icons/md";
 import { PiChatCenteredTextFill } from "react-icons/pi";
 import { NavLink } from "react-router-dom";
@@ -8,12 +8,12 @@ const Country = ({ country }) => {
     const { country_Name, short_description, image } = country
     return (
         <NavLink to={`/target/${country_Name}`}>
-            <div className=" flex flex-col rounded overflow-hidden shadow-lg m-4">
+            <div className=" flex flex-col rounded overflow-hidden shadow-lg m-4 dark:bg-[#f4f3f0] dark:text-gray-800">
                 <div>
                     <div className="h-48">
                         <img src={image} alt="Siem Reap" className=" w-full h-full object-cover bg-center " />
                     </div>
-                    <p className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-extrabold text-white text-3xl">{country_Name}</p>
+                    
                 </div>
 
                 

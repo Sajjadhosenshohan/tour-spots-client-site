@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Firebase/AuthProvider";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 
 const MyList = () => {
 
@@ -39,19 +40,19 @@ const MyList = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data)
-                        
-                        
+
+
                         if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
-                                text: "Your tour spots cart has been deleted.",
+                                text: "Your Tour Spots List Has Been Deleted.",
                                 icon: "success"
                             });
 
                             const remaining = details.filter(d => d._id !== _id)
                             setDetails(remaining)
-                            
-                            
+
+
                         }
                     })
             }
@@ -60,14 +61,16 @@ const MyList = () => {
 
 
     return (
-        <div className="mt-12 mb-24 p-4  lg:p-24 bg-[#f4f3f0]">
-            <h1 className="mb-12 text-xl md:text-3xl text-center font-bold">My list: <span className="bg-primary px-3 rounded font-normal">{details.length}</span></h1>
+        <div className="mt-12 mb-24 p-4  lg:p-24  dark:bg-[#f4f3f0] dark:text-gray-800">
+            <Fade direction="left">
+                <h1 className="mb-12 text-xl md:text-3xl text-center font-bold">My list: <span className="bg-primary px-3 rounded font-normal">{details.length}</span></h1>
+            </Fade>
 
             <div>
                 <div className="overflow-x-auto ">
                     <table className="table ">
                         {/* head */}
-                        <thead className="border-y-2 border-dotted border-primary">
+                        <thead className="border-y-2 border-dotted border-primary dark:text-gray-800">
                             <tr className="font-bold text-2xl">
                                 <th>List no:</th>
                                 <th>Tourist Spots</th>
@@ -118,7 +121,7 @@ const MyList = () => {
                                     </th>
                                 </tr>)
                             }
-                            
+
                         </tbody>
                         {/* foot */}
 

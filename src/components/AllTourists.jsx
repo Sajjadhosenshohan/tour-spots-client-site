@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import DecendingCard from "./DecendingCard";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { AuthContext } from "../Firebase/AuthProvider";
+import { Fade } from "react-awesome-reveal";
 // import SingleCardByUser from "./SingleCardByUser";
 
 const AllTourists = () => {
     // loader
     const LoadInfo = useLoaderData();
     const [allTourSpot, setAllTourSpot] = useState(LoadInfo)
-    console.log(allTourSpot)
 
+    const { loading } = useContext(AuthContext)
 
 
     // state
@@ -39,13 +41,22 @@ const AllTourists = () => {
 
     };
 
+    if (loading) {
+        return <div className="flex items-center justify-center my-[150px]">
+            <div className="md:w-28 md:h-28 w-12 h-12 border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
+        </div>
+
+    }
+
 
 
     return (
         <div className="mt-12 mb-24 ">
             <div className="text-center  mx-auto w-2/3 md:w-full">
-                <h2 className="font-bold text-4xl mb-3 " >Explore All Tourist Spot</h2>
-                <p>Discover new adventures around the global.</p>
+                <Fade direction="left">
+                    <h2 className="font-bold text-4xl mb-3 dark:text-gray-800" >Explore All Tourist Spot</h2>
+                    <p>Discover new adventures around the global.</p>
+                </Fade>
             </div>
 
             {/* button  */}

@@ -6,10 +6,10 @@ import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({children}) => {
-    const [user, setUser] = useState([])
-    console.log(user)
+    const [user, setUser] = useState()
+    // console.log(user)
 
-    const [reload, setReload] = useState(false)
+    // const [reload, setReload] = useState(false)
     const [loading, setLoading] = useState(true)
 
     // social provider
@@ -68,9 +68,9 @@ const AuthProvider = ({children}) => {
         return () => {
             unSubscribe()
         }
-    }, [reload])
+    }, [])
 
-    const Info = { createUser, signIn, googleLogin, githubLogin, user, logout, loading, setReload}
+    const Info = { createUser, signIn, googleLogin, githubLogin, user, logout, loading}
     return (
         <AuthContext.Provider value={Info}>
             {children}

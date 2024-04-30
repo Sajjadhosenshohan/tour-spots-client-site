@@ -2,6 +2,7 @@ import { useContext, } from "react";
 import { useLoaderData, } from "react-router-dom";
 import { AuthContext } from "../../Firebase/AuthProvider";
 import Swal from "sweetalert2";
+import { Fade } from "react-awesome-reveal";
 
 const Update = () => {
 
@@ -65,8 +66,10 @@ const Update = () => {
     return (
         <div className="p-4 md:p-16 lg:p-24  bg-[#F4F3F0]
         rounded-lg">
-            <h1 className='text-2xl md:text-4xl mx-auto  font-bold text-center mb-6 w-2/3 md:w-full'>Update Tourists Spot Form</h1>
-            {/* <p>{id}</p> */}
+            <Fade direction="left">
+            <h1 className='text-2xl md:text-4xl mx-auto  font-bold text-center mb-6 w-2/3 md:w-full dark:text-black'>Update Tourists Spot Form</h1>
+            </Fade>
+            
             <form onSubmit={handleUpdate} className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 {/*name*/}

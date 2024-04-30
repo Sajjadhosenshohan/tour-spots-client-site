@@ -63,7 +63,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/updateForm/:id",
-        element: <Update></Update>,
+        element: <ProtectedRoute><Update></Update></ProtectedRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
       },
       {

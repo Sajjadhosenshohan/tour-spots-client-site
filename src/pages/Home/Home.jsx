@@ -2,22 +2,31 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../../components/Banner";
 import TourSection from "../../components/TourSection";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Countries from "../../components/Countries";
 import WhyChooseUs from "../../components/WhyChooseUs";
 import CustomarReview from "../../components/CustomarReview";
+import { AuthContext } from "../../Firebase/AuthProvider";
 
 const Home = () => {
     const LoadInfo = useLoaderData();
-  const [tourInfos, setTourInfos] = useState(LoadInfo)
+    const [tourInfos, setTourInfos] = useState(LoadInfo)
+
+    const { loading } = useContext(AuthContext)
+    if (loading) {
+        return <div className="flex items-center justify-center my-[150px]">
+            <div className="md:w-28 md:h-28 w-12 h-12 border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
+        </div>
+
+    }
 
     return (
         <div className="mt-12">
             <Banner></Banner>
-            
-            <TourSection 
-            tourInfos={tourInfos}
-            setTourInfos={setTourInfos}>
+
+            <TourSection
+                tourInfos={tourInfos}
+                setTourInfos={setTourInfos}>
             </TourSection>
 
             <WhyChooseUs></WhyChooseUs>
@@ -44,7 +53,7 @@ export default Home;
 // https://i.ibb.co/fvf10B7/pexels-yovanverma-2082103.jpg
 
 // for bangladesh
-// https://i.ibb.co/tMHn1Z4/pexels-mithilamousaha-11356779.jpg 
+// https://i.ibb.co/tMHn1Z4/pexels-mithilamousaha-11356779.jpg
 // https://i.ibb.co/LrCXb99/pexels-khanshaheb-9711952.jpg 1
 // https://i.ibb.co/Zhr0hvR/pexels-ferdous-13525370.jpg 1
 // https://i.ibb.co/YfBY6mV/pexels-ferdous-6113097.jpg

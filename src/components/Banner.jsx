@@ -10,6 +10,7 @@ import { Typewriter } from 'react-simple-typewriter'
 // import '../../Pages/Home/BannerStyle/Banner.css';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import {  NavLink } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 // import 'animate.css';
 
@@ -65,8 +66,12 @@ const Banner = () => {
                                 </h1>
 
 
-                                <p className="mb-5">It`s not Just Travel. we create Lifelong Adventures</p>
-                                <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Let's Booking`}</button>
+                                <p>It`s not Just Travel. we create Lifelong Adventures</p>
+
+                                <div>
+                                    <NavLink to="/signIn" > <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Get Started`}</button></NavLink>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -97,8 +102,10 @@ const Banner = () => {
                                 </h1>
 
 
-                                <p className="mb-5">It`s not Just Travel. we create Lifelong Adventures</p>
-                                <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Let's Booking`}</button>
+                                <p >It`s not Just Travel. we create Lifelong Adventures</p>
+                                <div>
+                                    <NavLink to="/signIn" > <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Get Started`}</button></NavLink>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -129,8 +136,10 @@ const Banner = () => {
                                 </h1>
 
 
-                                <p className="mb-5">It`s not Just Travel. we create Lifelong Adventures</p>
-                                <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Let's Booking`}</button>
+                                <p >It`s not Just Travel. we create Lifelong Adventures</p>
+                                <div>
+                                    <NavLink to="/signIn" > <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Get Started`}</button></NavLink>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -161,22 +170,19 @@ const Banner = () => {
                                 </h1>
 
 
-                                <p className="mb-5">It`s not Just Travel. we create Lifelong Adventures</p>
-                                <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Let's Booking`}</button>
+                                <p>It`s not Just Travel. we create Lifelong Adventures</p>
+                                <div>
+                                    <NavLink to="/signIn" > <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Get Started`}</button></NavLink>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 ...
             </Swiper>
-           
+
         </div>
     );
 };
 
 export default Banner;
-
-{/* https://i.ibb.co/Gpc3YVT/pexels-sudipta-1603650.jpg
-https://i.ibb.co/3p77c5H/pexels-souvenirpixels-417074.jpg
-https://i.ibb.co/GdDCf18/pexels-freestockpro-2166553.jpg
-https://i.ibb.co/YfLNcNz/pexels-jaime-reimer-1376930-2662116.jpg */}

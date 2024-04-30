@@ -14,7 +14,7 @@ const DecendingCard = ({ allTour }) => {
     
     return (
 
-        <div className="relative  rounded overflow-hidden shadow-lg m-4">
+        <div className="relative  rounded overflow-hidden shadow-lg m-4 dark:bg-[#f4f3f0] dark:text-gray-800">
             <img src={image} alt="Siem Reap" className="w-full h-48 object-cover" />
 
             <span className="absolute top-0 right-0 bg-red-400 rounded-sm p-2">{average_cost}</span>
