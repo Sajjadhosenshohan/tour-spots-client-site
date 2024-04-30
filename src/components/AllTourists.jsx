@@ -58,7 +58,7 @@ const AllTourists = () => {
             </Helmet>
             <div className="text-center  mx-auto w-2/3 md:w-full">
                 <Fade direction="left">
-                    <h2 className="font-bold text-4xl mb-3 dark:text-gray-800" >Explore All Tourist Spot</h2>
+                    <h2 className="font-bold text-4xl mb-3" >Explore All Tourist Spot</h2>
                     <p>Discover new adventures around the global.</p>
                 </Fade>
             </div>
@@ -75,8 +75,8 @@ const AllTourists = () => {
 
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li onClick={() => handleFilter('all')}><a>all</a></li>
-                        <li onClick={() => handleFilter('ascending')}><a>High to Low</a></li>
-                        <li onClick={() => handleFilter('descending')}><a>Low to High</a></li>
+                        <li onClick={() => handleFilter('ascending')}><a>Price High to Low</a></li>
+                        <li onClick={() => handleFilter('descending')}><a>Price Low to High</a></li>
 
                     </ul>
                 </div>

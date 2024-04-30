@@ -112,7 +112,7 @@ const MyList = () => {
 
                                         <span className="badge badge-ghost badge-sm bg-primary ">{detail.average_cost}</span>
                                     </td>
-                                    {/* <td>{detail.average_cost}</td> */}
+                                    
                                     <th>
                                         <Link to={`/updateForm/${detail._id}`}>
                                             <button className="btn btn-warning">Update</button>

@@ -17,7 +17,7 @@ const img4 = "https://i.ibb.co/Gpc3YVT/pexels-sudipta-1603650.jpg"
 
 const Banner = () => {
     return (
-        <div>
+        <div className='rounded-md'>
 
 
             <Swiper className="mySwiper h-[500px] "

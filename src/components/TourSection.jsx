@@ -10,7 +10,7 @@ const TourSection = ({ tourInfos, setTourInfos }) => {
             <div className="text-center mb-12 mx-auto w-2/3 md:w-full">
                 <Fade direction="left">
                     <h2 className="font-bold text-2xl md:text-4xl mb-3 " >Discover Latest Tourists Spots</h2>
-                    <p>Treat yourself with a journey to your inner self. We promise, you’ll enjoy every step you make.</p>
+                    <p>Treat yourself with a journey to your inner self. We promise, you will enjoy every step you make.</p>
                 </Fade>
                 
             </div>
