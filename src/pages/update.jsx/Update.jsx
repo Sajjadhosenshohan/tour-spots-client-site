@@ -39,7 +39,7 @@ const Update = () => {
 
 
 
-        fetch(`https://travel-server-virid.vercel.app/update/${_id}`, {
+        fetch(`http://localhost:5000/update/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

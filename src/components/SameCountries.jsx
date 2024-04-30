@@ -26,18 +26,13 @@ const SameCountries = ({ detail }) => {
                 <div className="font-bold text-xl mb-2">{location}</div>
                 <p className="">{short_description}</p>
 
-                {/* <div className="flex gap-2 items-center  justify-start mb-2">
-                    <FaLocationDot className=" text-primary" />
-                    <p className="text-gray-700 text-base ">{`${location}, ${country_Name}`}</p>
-                </div> */}
                 <div className="flex gap-2 items-center  justify-start mb-2">
                     <GiTakeMyMoney className=" text-primary" />
                     <p className="text-gray-700">Average_cost: {average_cost}</p>
                 </div>
 
                 <div className="mb-4">
-                    {/* <p className="text-gray-700">Average Cost: {average_cost}</p> */}
-
+                    
                     <div className="flex gap-2 items-center  justify-start mb-2">
                         <TiWeatherPartlySunny className=" text-primary" />
                         <p className="text-gray-700">TotalVisitorsPerYear: {totalVisitorsPerYear}</p>

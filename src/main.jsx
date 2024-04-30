@@ -26,7 +26,7 @@ import Error from './pages/Error/Error';
 // import TourSection from './components/TourSection';
 
 
-// https://travel-server-virid.vercel.app
+// http://localhost:5000
 
 const router = createBrowserRouter([
   {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch(`https://travel-server-virid.vercel.app/allTour`)
+        loader: () => fetch(`http://localhost:5000/allTour`)
 
       },
       {
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
       {
         path: "/allTour",
         element: <AllTourists></AllTourists>,
-        loader: () => fetch(`https://travel-server-virid.vercel.app/allTour`)
+        loader: () => fetch(`http://localhost:5000/allTour`)
       },
       {
         path: "/myList",
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
       {
         path: "/updateForm/:id",
         element: <ProtectedRoute><Update></Update></ProtectedRoute>,
-        loader: ({ params }) => fetch(`https://travel-server-virid.vercel.app/update/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
       },
       {
         path: "/signIn",

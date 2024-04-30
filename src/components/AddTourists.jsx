@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Firebase/AuthProvider";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 const AddTourists = () => {
     const { user } = useContext(AuthContext)
@@ -27,11 +28,11 @@ const AddTourists = () => {
 
         const booking = { name, email, tourists_spot_name, country_Name, location, average_cost, totalVisitorsPerYear, travel_time, seasonality, short_description, image }
 
-        fetch(`https://travel-server-virid.vercel.app/allTour`, {
+        fetch(`http://localhost:5000/allTour`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                
+
             },
             body: JSON.stringify(booking),
         })
@@ -54,6 +55,10 @@ const AddTourists = () => {
     return (
         <div className="p-4 md:p-16 lg:p-24  bg-[#F4F3F0]
         rounded-lg">
+
+            <Helmet>
+                <title>Add Tourist spots</title>
+            </Helmet>
             <Fade direction="left">
                 <h1 className='text-2xl md:text-4xl mx-auto  font-bold text-center mb-6 w-2/3 md:w-full dark:text-black'>Add Tourists Spot Form</h1>
             </Fade>

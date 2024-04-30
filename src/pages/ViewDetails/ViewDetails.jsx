@@ -1,6 +1,7 @@
 // import React from 'react';
 
 import { useEffect, useState } from "react";
+// import { Helmet } from "react-helmet";
 import { FaGlobe } from "react-icons/fa";
 import { FaCity, FaLocationDot } from "react-icons/fa6";
 import { GiMountainClimbing, GiTakeMyMoney } from "react-icons/gi";
@@ -9,13 +10,13 @@ import { TiWeatherPartlySunny } from "react-icons/ti";
 import { useParams } from "react-router-dom";
 
 const ViewDetails = () => {
-    const { id, } = useParams()
+    const {id} = useParams()
     console.log(id)
 
     const [details, setDetails] = useState({});
 
     useEffect(() => {
-        fetch(`https://travel-server-virid.vercel.app/views/${id}`)
+        fetch(`http://localhost:5000/views/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -25,8 +26,10 @@ const ViewDetails = () => {
 
     const { tourists_spot_name, country_Name, location, average_cost, totalVisitorsPerYear, travel_time, seasonality, short_description, image } = details
 
+    console.log(29,details)
     return (
         <div className=" relative  rounded overflow-hidden shadow-lg m-4 p-6  dark:bg-[#f4f3f0] dark:text-gray-800">
+
             <div className=" flex flex-col md:flex-row gap-6">
 
                 <div className="flex items-center justify-center">
@@ -47,7 +50,7 @@ const ViewDetails = () => {
                     <h2 className="w-2/3 mb-4">{short_description}</h2>
 
                     <div className=" grid grid-cols-1 md:grid-cols-2">
-                       
+
                         <div className="flex gap-2 items-center  justify-start mb-2">
                             <FaLocationDot className=" text-primary" />
                             <p className="text-gray-700  ">
@@ -84,7 +87,7 @@ const ViewDetails = () => {
 
 
                     </div>
-                 
+
                 </div>
             </div>
         </div>

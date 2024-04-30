@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
        
-        <footer className="py-6 max-w-[85%] mx-auto space-y-8 md:space-y-12 rounded-lg dark:text-white ">
+        <footer className="py-6 max-w-[85%] mx-auto space-y-8 md:space-y-12 rounded-lg dark:text-white text-black">
             <div className=" px-6 mx-auto space-y-6 divide-y dark:divide-gray-600 md:space-y-12 divide-opacity-50">
 
                 <div className="flex flex-col  lg:flex-row gap-6 lg:justify-between">
@@ -70,22 +70,22 @@ const Footer = () => {
 
                         <div>
                             <label htmlFor="name" className="text-sm">Full name</label>
-                            <input id="name" type="text" placeholder="" className="border-2 border-slate-800 w-full p-3 rounded dark:bg-gray-100" />
+                            <input id="name" type="text" placeholder="" className="border-2 border-slate-800 w-full p-3 rounded " />
                         </div>
                         <div>
                             <label htmlFor="email" className="text-sm">Email</label>
-                            <input id="email" type="email" className="border-2 border-slate-800 w-full p-3 rounded dark:bg-gray-100" />
+                            <input id="email" type="email" className="border-2 border-slate-800 w-full p-3 rounded " />
                         </div>
                         <div>
                             <label htmlFor="message" className="text-sm">Message</label>
-                            <textarea id="message" rows="3" className="border-2 border-slate-800 w-full p-3 rounded dark:bg-gray-100"></textarea>
+                            <textarea id="message" rows="3" className="border-2 border-slate-800 w-full p-3 rounded "></textarea>
                         </div>
                         <button type="submit" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-primary dark:text-gray-50 ">Send Message</button>
                     </form>
 
                 </div>
 
-                <div className="py-6 text-lg text-center dark:text-gray-400">
+                <div className="py-6 text-lg text-center ">
                     © 2024 GoWilds. All rights reserved.</div>
             </div>
         </footer>

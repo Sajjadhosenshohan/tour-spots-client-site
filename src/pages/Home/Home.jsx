@@ -7,6 +7,7 @@ import Countries from "../../components/Countries";
 import WhyChooseUs from "../../components/WhyChooseUs";
 import CustomarReview from "../../components/CustomarReview";
 import { AuthContext } from "../../Firebase/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
     const LoadInfo = useLoaderData();
@@ -22,6 +23,10 @@ const Home = () => {
 
     return (
         <div className="mt-12">
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
+            
             <Banner></Banner>
 
             <TourSection

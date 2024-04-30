@@ -8,6 +8,7 @@ import { Link, useLocation, useNavigate, } from "react-router-dom";
 import { AuthContext } from "../../Firebase/AuthProvider";
 import { FaEyeSlash, FaRegEye } from "react-icons/fa";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 const SignIn = () => {
     const [showPass, setShowPass] = useState(false);
@@ -84,9 +85,10 @@ const SignIn = () => {
     return (
         <div className="min-h-[50%] flex justify-center  mb-5 bg-cover bg-center " style={{ backgroundImage: `url('https://i.ibb.co/YfLNcNz/pexels-jaime-reimer-1376930-2662116.jpg ')` }}>
 
-            {/* <Helmet>
-                <title>My-Home-Estate | Login</title>
-            </Helmet> */}
+            <Helmet>
+                <title>GoWilds | Login</title>
+            </Helmet>
+            
             <div className="hero-content flex-col ">
 
                 <div className="card shrink-0 w-full max-w-md shadow-2xl   backdrop-blur-md bg-white/30">

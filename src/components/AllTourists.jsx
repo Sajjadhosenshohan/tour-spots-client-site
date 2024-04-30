@@ -4,6 +4,7 @@ import DecendingCard from "./DecendingCard";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { AuthContext } from "../Firebase/AuthProvider";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 
 const AllTourists = () => {
@@ -52,6 +53,9 @@ const AllTourists = () => {
 
     return (
         <div className="mt-12 mb-24 ">
+            <Helmet>
+                <title>All Tourist spots</title>
+            </Helmet>
             <div className="text-center  mx-auto w-2/3 md:w-full">
                 <Fade direction="left">
                     <h2 className="font-bold text-4xl mb-3 dark:text-gray-800" >Explore All Tourist Spot</h2>

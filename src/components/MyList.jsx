@@ -4,6 +4,7 @@ import { AuthContext } from "../Firebase/AuthProvider";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
+import { Helmet } from "react-helmet";
 
 const MyList = () => {
 
@@ -14,7 +15,7 @@ const MyList = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        fetch(`https://travel-server-virid.vercel.app/myList/${user?.email}`)
+        fetch(`http://localhost:5000/myList/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -34,7 +35,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://travel-server-virid.vercel.app/delete/${_id}`, {
+                fetch(`http://localhost:5000/delete/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -62,6 +63,9 @@ const MyList = () => {
 
     return (
         <div className="mt-12 mb-24 p-4  lg:p-24  dark:bg-[#f4f3f0] dark:text-gray-800">
+            <Helmet>
+                <title>My list</title>
+            </Helmet>
             <Fade direction="left">
                 <h1 className="mb-12 text-xl md:text-3xl text-center font-bold">My list: <span className="bg-primary px-3 rounded font-normal">{details.length}</span></h1>
             </Fade>
