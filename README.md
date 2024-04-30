@@ -7,7 +7,21 @@
 ##  Npm Package Name list:
 - React Tooltip,
 - React Simple Typewriter,
+- React Awesome Reveal
 
+## My selected category's name:
+### Southeast Asia:
+- Bangladesh: Sundarban, Cox’s Bazar, Rangamati, Bandarban, Saint
+Martin’s Island
+- Thailand: Bangkok, Chiang Mai, Ayutthaya, Phuket, Phi Phi Islands
+- Indonesia: Bali, Borobudur Temple, Komodo National Park, Raja
+Ampat Islands, Yogyakarta
+- Malaysia: Kuala Lumpur, Langkawi, Penang, Cameron Highlands,
+Taman Negara National Park
+- Vietnam: Ha Long Bay, Ho Chi Minh City, Hoi An Ancient Town, Phong
+Nha Caves, Mekong Delta
+- Cambodia: Angkor Wat, Siem Reap, Phnom Penh, Kep, Bokor National
+Park
 
 ## Features 
 
