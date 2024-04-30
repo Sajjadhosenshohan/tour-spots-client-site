@@ -1,4 +1,4 @@
-// import { useLoaderData } from "react-router-dom";
+
 import { useLoaderData } from "react-router-dom";
 import Banner from "../../components/Banner";
 import TourSection from "../../components/TourSection";
@@ -26,7 +26,7 @@ const Home = () => {
             <Helmet>
                 <title>Home</title>
             </Helmet>
-            
+
             <Banner></Banner>
 
             <TourSection

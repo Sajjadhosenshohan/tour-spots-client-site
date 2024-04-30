@@ -21,9 +21,7 @@ import Countries from './components/Countries';
 import TargetCountry from './components/TargetCountry';
 import ProtectedRoute from './pages/ProtectedRoute';
 import Error from './pages/Error/Error';
-// import TargetCountry from './components/TargetCountry';
-// import TourSection from './components/TourSection';
-// import TourSection from './components/TourSection';
+
 
 
 // http://localhost:5000

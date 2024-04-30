@@ -11,7 +11,7 @@ const Countries = () => {
         fetch(`http://localhost:5000/countriesData`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                
                 setCountries(data)
             })
     }, [])

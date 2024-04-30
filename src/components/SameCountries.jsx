@@ -8,7 +8,7 @@ const SameCountries = ({ detail }) => {
 
     const { _id, tourists_spot_name, location, average_cost, totalVisitorsPerYear, travel_time, seasonality, image, country_Name, short_description } = detail
 
-    // console.log(allTour)
+    
 
 
     return (
