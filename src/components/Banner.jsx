@@ -1,18 +1,14 @@
-// import React, { useRef, useState } from 'react';
-// Import Swiper React components
+
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Typewriter } from 'react-simple-typewriter'
 
-// import '../../Pages/Home/BannerStyle/Banner.css';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import {  NavLink } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
-// import 'animate.css';
+
 
 const img1 = "https://i.ibb.co/3p77c5H/pexels-souvenirpixels-417074.jpg"
 const img2 = "https://i.ibb.co/GdDCf18/pexels-freestockpro-2166553.jpg"

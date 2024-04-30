@@ -14,7 +14,7 @@ const MyList = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myList/${user?.email}`)
+        fetch(`https://travel-server-virid.vercel.app/myList/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -34,7 +34,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/delete/${_id}`, {
+                fetch(`https://travel-server-virid.vercel.app/delete/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -85,9 +85,7 @@ const MyList = () => {
                             {
                                 details.map((detail, index) => <tr key={index}>
                                     <th className="text-primary">{index + 1}
-                                        {/* <label>
-                                            <input type="checkbox" className="checkbox" />
-                                        </label> */}
+                                        
                                     </th>
                                     <td>
                                         <div className="flex items-center gap-3">

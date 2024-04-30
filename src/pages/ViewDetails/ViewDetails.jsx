@@ -15,7 +15,7 @@ const ViewDetails = () => {
     const [details, setDetails] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/views/${id}`)
+        fetch(`https://travel-server-virid.vercel.app/views/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -32,7 +32,6 @@ const ViewDetails = () => {
                 <div className="flex items-center justify-center">
                     <img src={image} alt="Siem Reap" className="w-full h-48 object-cover" />
 
-                    {/* <span className="absolute top-0 right-3/4 bg-red-400 rounded-sm p-2">{country_Name}</span> */}
                 </div>
 
 
@@ -48,7 +47,7 @@ const ViewDetails = () => {
                     <h2 className="w-2/3 mb-4">{short_description}</h2>
 
                     <div className=" grid grid-cols-1 md:grid-cols-2">
-                        {/* <p className="text-gray-700">Average Cost: {average_cost}</p> */}
+                       
                         <div className="flex gap-2 items-center  justify-start mb-2">
                             <FaLocationDot className=" text-primary" />
                             <p className="text-gray-700  ">
@@ -83,12 +82,9 @@ const ViewDetails = () => {
                             <p className="text-gray-700">Travel time: {travel_time}</p>
                         </div>
 
-                        {/* <p className="text-gray-700">Travel Time: {travel_time}</p> */}
 
                     </div>
-                    {/* <Link to={`/viewDetails/${_id}`}>
-    <button className="bg-primary hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full text-center">View details</button>
-</Link> */}
+                 
                 </div>
             </div>
         </div>

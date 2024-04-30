@@ -25,10 +25,6 @@ const Country = ({ country }) => {
                     <div className=" mb-2 flex items-start">
                         <span className="mr-3 text-primary font-bold text-xl"><PiChatCenteredTextFill /></span> {short_description}
                     </div>
-
-
-                    {/* <button className="bg-primary hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full text-center">View details</button> */}
-
                     {/* https://i.ibb.co/NKx8GX8/thailand.jpg
                     https://i.ibb.co/vHYt0xy/combodia.jpg
                     https://i.ibb.co/9vPt0yG/indonesia.jpg

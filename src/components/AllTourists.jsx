@@ -4,7 +4,7 @@ import DecendingCard from "./DecendingCard";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { AuthContext } from "../Firebase/AuthProvider";
 import { Fade } from "react-awesome-reveal";
-// import SingleCardByUser from "./SingleCardByUser";
+
 
 const AllTourists = () => {
     // loader
@@ -14,7 +14,7 @@ const AllTourists = () => {
     const { loading } = useContext(AuthContext)
 
 
-    // state
+    
     const [tours, setTours] = useState(allTourSpot);
 
     const handleFilter = (filterType) => {

@@ -68,7 +68,7 @@ const SignIn = () => {
             })
             .catch(error => {
                 console.error(error)
-                alert("not working")
+                toast.error(error.message)
             })
 
     }

@@ -12,7 +12,7 @@ const TargetCountry = () => {
     // const [details, setDetails] = useState([]);
 
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/countriesData`)
+    //     fetch(`https://travel-server-virid.vercel.app/countriesData`)
     //         .then(res => res.json())
     //         .then(data => {
     //             console.log(data)
@@ -26,10 +26,10 @@ const TargetCountry = () => {
     //     // Fetch data from the first collection
     //     const fetchData = async () => {
     //         try {
-    //             const response1 = await fetch(`http://localhost:5000/countriesData`);
+    //             const response1 = await fetch(`https://travel-server-virid.vercel.app/countriesData`);
     //             const data1 = await response1.json();
     //             // Fetch data from the second collection
-    //             const response2 = await fetch(`http://localhost:5000/allTour`);
+    //             const response2 = await fetch(`https://travel-server-virid.vercel.app/allTour`);
     //             const data2 = await response2.json();
     //             // Combine data from both collections
     //             const allData = [...data1, ...data2];
@@ -52,7 +52,7 @@ const TargetCountry = () => {
 
     useEffect(() => {
         // Fetch data from allTour endpoint
-        fetch(`http://localhost:5000/allTour`)
+        fetch(`https://travel-server-virid.vercel.app/allTour`)
             .then(response => response.json())
             .then(data => {
                 // Filter tour data based on country name

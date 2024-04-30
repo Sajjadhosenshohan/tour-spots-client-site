@@ -110,7 +110,3 @@ const CustomarReview = () => {
 };
 
 export default CustomarReview;
-
-// https://i.ibb.co/ry0MtGQ/pexels-italo-melo-881954-2379004.jpg
-// https://i.ibb.co/SJXbyDq/pexels-olly-840996.jpg
-// https://i.ibb.co/kh47drG/pexels-olly-914927.jpg

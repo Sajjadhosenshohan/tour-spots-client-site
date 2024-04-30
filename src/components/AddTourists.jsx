@@ -27,11 +27,11 @@ const AddTourists = () => {
 
         const booking = { name, email, tourists_spot_name, country_Name, location, average_cost, totalVisitorsPerYear, travel_time, seasonality, short_description, image }
 
-        fetch(`http://localhost:5000/allTour`, {
+        fetch(`https://travel-server-virid.vercel.app/allTour`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                // 'Content-Type': 'application/x-www-form-urlencoded',
+                
             },
             body: JSON.stringify(booking),
         })
@@ -48,28 +48,6 @@ const AddTourists = () => {
                 }
             })
 
-        // fetch('https://coffee-store-server-rekkhyg25-shohans-projects-b5403d71.vercel.app/coffee', {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //         // 'Content-Type': 'application/x-www-form-urlencoded',
-        //       },
-        //     body: JSON.stringify(newCoffee),
-        // })
-        // .then(res => res.json())
-        // .then(data => {
-        //     console.log(data)
-        //     if(data.insertedId.length > 0){
-        //         Swal.fire({
-        //             title: 'Success!',
-        //             text: 'User added successfully',
-        //             icon: 'success',
-        //             confirmButtonText: 'Cool'
-        //           })
-        //     }
-
-        //     form.reset()
-        // })
     }
 
 

@@ -90,8 +90,7 @@ const Nav = () => {
                         </ul>
                     </div>
                     <Link to='/' className=" flex items-center md:font-bold  ml-1 md:text-3xl ">
-                        {/* <HiHome className="text-primary" /> */}
-
+                    
 
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-green-400 ">GoWilds</span>
 
@@ -126,13 +125,10 @@ const Nav = () => {
 
                                     <img className="my-anchor-element-class" src={user?.photoURL || "https://i.ibb.co/fYRGNg6/profile.jpg"}
 
-                                        // title={(user?.displayName) || 'Name not found'}
                                         alt="User avatar"
 
 
                                     />
-
-
 
                                     <Tooltip
 
