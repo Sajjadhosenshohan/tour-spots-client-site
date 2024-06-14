@@ -62,7 +62,7 @@ const Banner = () => {
                                 </h1>
 
 
-                                <p>It`s not Just Travel. we create Lifelong Adventures</p>
+                                <p>It`s not Just Travel. we create Lifelong Adventure</p>
 
                                 <div>
                                     <NavLink to="/signIn" > <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Get Started`}</button></NavLink>
