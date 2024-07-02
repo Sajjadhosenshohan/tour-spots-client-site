@@ -2,7 +2,7 @@
 
 ## Live Link: [https://tour-2b613.web.app/](https://tour-2b613.web.app/)
 
-## Server side : [https://github.com/Sajjadhosenshohan/tour-spots-server-side](https://github.com/Sajjadhosenshohan/tour-spots-server-side)
+## Server side repository: [https://github.com/Sajjadhosenshohan/tour-spots-server-side](https://github.com/Sajjadhosenshohan/tour-spots-server-side)
 
 
 
