@@ -5,20 +5,21 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { Helmet } from "react-helmet";
-
+import { MdDelete } from "react-icons/md";
+import { FiEdit } from "react-icons/fi";
 const MyList = () => {
 
     const { user } = useContext(AuthContext)
 
-    console.log("mail", user.email)
+    // console.log("mail", user.email)
 
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        fetch(`https://travel-server-virid.vercel.app/myList/${user?.email}`)
+        fetch(`http://localhost:5000/myList/${user?.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 setDetails(data)
             })
     }, [user])
@@ -35,7 +36,7 @@ const MyList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://travel-server-virid.vercel.app/delete/${_id}`, {
+                fetch(`http://localhost:5000/delete/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -62,7 +63,8 @@ const MyList = () => {
 
 
     return (
-        <div className="mt-12 mb-24 p-4  lg:p-24  dark:bg-[#f4f3f0] dark:text-gray-800">
+        <div className=" mt-12 mb-24 p-4 text-black lg:p-24  bg-white
+        rounded-lg">
             <Helmet>
                 <title>My list</title>
             </Helmet>
@@ -72,10 +74,10 @@ const MyList = () => {
 
             <div>
                 <div className="overflow-x-auto ">
-                    <table className="table ">
+                    <table className="table table-zebra">
                         {/* head */}
-                        <thead className="border-y-2 border-dotted border-primary dark:text-gray-800">
-                            <tr className="font-bold text-2xl">
+                        <thead className="bg-secondary">
+                            <tr className="font-bold text-2xl text-slate-700">
                                 <th>List no:</th>
                                 <th>Tourist Spots</th>
                                 <th>Country</th>
@@ -89,7 +91,7 @@ const MyList = () => {
                             {
                                 details.map((detail, index) => <tr key={index}>
                                     <th className="text-primary">{index + 1}
-                                        
+
                                     </th>
                                     <td>
                                         <div className="flex items-center gap-3">
@@ -110,17 +112,47 @@ const MyList = () => {
                                     </td>
                                     <td>
 
-                                        <span className="badge badge-ghost badge-sm bg-primary ">{detail.average_cost}</span>
+                                        <span className="badge badge-ghost badge-sm bg-green-400">{detail.average_cost}</span>
                                     </td>
-                                    
-                                    <th>
+
+                                    <td>
                                         <Link to={`/updateForm/${detail._id}`}>
-                                            <button className="btn btn-warning">Update</button>
+                                            <button
+                                                className="btn btn-circle btn-outline border-2 border-[#ec4134] hover:bg-primary hover:border-[#ec4134] text-[#ec4134] hover:text-white text-2xl">
+                                                {
+                                                    <FiEdit />
+                                                }
+                                            </button>
                                         </Link>
-                                    </th>
-                                    <th>
-                                        <button onClick={() => handleDelete(detail._id)} className="btn btn-error">Delete</button>
-                                    </th>
+                                    </td>
+                                    <td>
+                                        <button onClick={() => handleDelete(detail._id)} className="btn btn-circle btn-outline border-2 border-[#ec4134] hover:bg-primary hover:border-[#ec4134] text-[#ec4134] hover:text-white text-2xl">
+                                            {
+                                                <MdDelete/>
+                                            }
+                                        </button>
+                                    </td>
+
+                                    {/* <td>
+                                        <button onClick={() => handleDelete(detail._id)} className="btn btn-circle btn-outline border-2 border-[#ec4134]">
+                                            {
+                                                <MdDelete className="text-[#ec4134] text-2xl" />
+                                            }
+
+                                        </button>
+                                    </td> */}
+
+                                    {/* <td>
+                                        <Link to={`/update/${asset._id}`}>
+                                            <button
+                                                className="btn btn-circle btn-outline border-2 border-primary">
+                                                {
+                                                    <FiEdit className="text-primary text-2xl" />
+                                                }
+                                            </button>
+                                        </Link>
+
+                                    </td> */}
                                 </tr>)
                             }
 

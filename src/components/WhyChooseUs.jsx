@@ -8,7 +8,7 @@ import { MdOutlineSecurity } from "react-icons/md";
 
 const WhyChooseUs = () => {
     return (
-        <section className=" mt-24">
+        <section className=" mt-24 ">
             <div className="container mx-auto">
 
                 <div className="text-center mb-12 mx-auto w-2/3 md:w-full">
@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
                 <div className="grid gap-6 my-16 lg:grid-cols-3 ">
 
                     {/* 1 */}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
+                    <div className="flex items-center relative cursor-pointer  m-4 hover:bg-secondary transition-all duration-300  rounded overflow-hidden shadow-lg bg-white text-black">
                         <div className="w-2/3  flex justify-center">
                             <MdOutlineSecurity className="text-primary font-bold text-4xl" />
                         </div>
@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
                     </div>
 
                     {/* 2 */}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
+                    <div className="flex items-center relative cursor-pointer  m-4 hover:bg-secondary transition-all duration-300  rounded overflow-hidden shadow-lg bg-white text-black">
                         <div className="w-2/3  flex justify-center">
                             <FaWifi className="text-primary font-bold text-4xl" />
                         </div>
@@ -50,7 +50,7 @@ const WhyChooseUs = () => {
                     </div>
 
                     {/* 3*/}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
+                    <div className="flex items-center relative cursor-pointer  m-4 hover:bg-secondary transition-all duration-300  rounded overflow-hidden shadow-lg bg-white text-black">
                         <div className="w-2/3  flex justify-center">
                             <GiSolarPower className="text-primary font-bold text-4xl" />
                         </div>
@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                     {/* 4 */}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
+                    <div className="flex items-center relative cursor-pointer  m-4 hover:bg-secondary transition-all duration-300  rounded overflow-hidden shadow-lg bg-white text-black">
                         <div className="w-2/3  flex justify-center">
                             <FaBiking className="text-primary font-bold text-4xl" />
                         </div>
@@ -76,7 +76,7 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                     {/* 5*/}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
+                    <div className="flex items-center relative cursor-pointer  m-4 hover:bg-secondary transition-all duration-300  rounded overflow-hidden shadow-lg bg-white text-black">
                         <div className="w-2/3  flex justify-center">
                             <FaPersonSwimming className="text-primary font-bold text-4xl" />
                         </div>
@@ -89,7 +89,7 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                     {/* 6*/}
-                    <div className="flex items-center rounded overflow-hidden shadow-lg dark:bg-[#f4f3f0] dark:text-gray-800">
+                    <div className="flex items-center relative cursor-pointer  m-4 hover:bg-secondary transition-all duration-300  rounded overflow-hidden shadow-lg bg-white text-black">
                         <div className="w-2/3  flex justify-center">
                             <CgGym className="text-primary font-bold text-4xl" />
                         </div>

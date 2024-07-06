@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 const AddTourists = () => {
     const { user } = useContext(AuthContext)
 
-    console.log("user ace", user)
+    // console.log("user ace", user)
     const handleAddTour = event => {
         event.preventDefault();
         const form = event.target
@@ -28,7 +28,7 @@ const AddTourists = () => {
 
         const booking = { name, email, tourists_spot_name, country_Name, location, average_cost, totalVisitorsPerYear, travel_time, seasonality, short_description, image }
 
-        fetch(`https://travel-server-virid.vercel.app/allTour`, {
+        fetch(`http://localhost:5000/allTour`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const AddTourists = () => {
 
 
     return (
-        <div className="p-4 md:p-16 lg:p-24  bg-[#F4F3F0]
+        <div className="mt-12 mb-24 p-4 text-black lg:p-24  bg-[#F3F3F3]
         rounded-lg">
 
             <Helmet>
@@ -176,9 +176,9 @@ const AddTourists = () => {
                 </div>
 
                 {/* button */}
-                <div className="col-span-1 md:col-span-2 ">
+                <div className="col-span-1 md:col-span-2 flex justify-center">
 
-                    <input type="submit" value="Add Tourists Spot" className="w-full font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center" />
+                <input type="submit" value="Add Tourists Spot" className="w-1/2 font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center" />
                 </div>
 
             </form>

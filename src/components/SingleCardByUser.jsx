@@ -3,50 +3,57 @@ import { FaLocationDot } from "react-icons/fa6";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { MdTour } from "react-icons/md";
+import Btn from "./Btn";
 const SingleCardByUser = ({ tour }) => {
 
-    const { _id, tourists_spot_name, country_Name, location, average_cost,  travel_time, seasonality, image } = tour
+    const { _id, tourists_spot_name, country_Name, location, average_cost, travel_time, seasonality, image } = tour
 
-    console.log(tour)
+    // console.log(tour)
     return (
-        <div className="relative  rounded overflow-hidden shadow-lg m-4 dark:bg-[#f4f3f0] dark:text-gray-800">
-            <img src={image} alt="Siem Reap" className="w-full h-48 object-cover" />
+        <div className="relative cursor-pointer group rounded overflow-hidden shadow-lg  hover:bg-secondary transition-all duration-300 bg-white text-black">
+            <img src={image} alt="Siem Reap" className="w-full h-48 object-cover group-hover:scale-110 
+                transition aspect-square " />
 
-            <span className="absolute top-0 right-0 bg-red-400 rounded-sm p-2">{country_Name}</span>
+            <span className="absolute top-2 right-2 bg-[#ff4a38] border-2 hover-no-bg rounded-full text-white p-2 transition-all duration-300 border-primary">
+                {country_Name}
+            </span>
 
             <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{tourists_spot_name}</div>
+                <div className="font-bold text-xl mb-2 ">{tourists_spot_name}</div>
 
-                <div className="flex gap-2 items-center  justify-start mb-2">
+                <div className="flex gap-2 items-center text-lg  justify-start mb-2">
                     <FaLocationDot className=" text-primary" />
-                    <p className=" text-base ">{`${location}, ${country_Name}`}</p>
+                    <p className=" text-base "><span className='text-slate-900'>Location: </span>
+                        <span className="font-semibold">{`${location}, ${country_Name}`}</span>
+                    </p>
                 </div>
 
                 <div className="mb-4">
                     {/* <p className="text-gray-700">Average Cost: {average_cost}</p> */}
 
-                    <div className="flex gap-2 items-center  justify-start mb-2">
+                    <div className="flex text-lg gap-2 items-center  justify-start mb-2">
                         <TiWeatherPartlySunny className=" text-primary" />
-                        <p className="text-base ">Average_cost: {average_cost}</p>
+                        <p><span className='text-slate-900'>Average_cost:</span> <span className="font-semibold">{average_cost}</span></p>
                     </div>
                     {/* _______________ */}
-
-                    <div className="flex gap-2 items-center  justify-start mb-2">
-                        <GiTakeMyMoney  className=" text-primary" />
-                        <p className="text-base ">Seasonality: {seasonality}</p>
+                    <div className="flex text-lg gap-2 items-center  justify-start mb-2">
+                        <GiTakeMyMoney className=" text-primary" />
+                        <p><span className='text-slate-900'>Seasonality: </span> <span className="font-semibold">{seasonality}</span></p>
                     </div>
                     {/* ____________ */}
 
-                    <div className="flex gap-2 items-center  justify-start mb-2">
-                        <MdTour  className=" text-primary" />
-                        <p className="text-base ">Travel time: {travel_time}</p>
+                    <div className="flex text-lg gap-2 items-center  justify-start mb-2">
+                        <MdTour className=" text-primary" />
+                        <p><span className='text-slate-900'>Travel time: </span> <span className="font-semibold">{travel_time}</span></p>
                     </div>
-
                     {/* <p className="text-gray-700">Travel Time: {travel_time}</p> */}
 
                 </div>
                 <Link to={`/viewDetails/${_id}`}>
-                    <button className="bg-primary hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full text-center">View details</button>
+                    <div className='w-full'>
+                        <Btn title="View details" />
+                    </div>
+
                 </Link>
             </div>
         </div>

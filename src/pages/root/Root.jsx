@@ -8,12 +8,14 @@ const Root = () => {
 
 
     return (
-        <div>
-            <div className="max-w-[85%] mx-auto space-y-8 md:space-y-12 rounded-lg ">
-                <Nav></Nav> 
-                <Outlet ></Outlet>
+        <div className="">
+            <div className="max-w-[85%] mx-auto ">
+                <Nav></Nav>
+                <div className="min-h-[calc(100vh - 723px)]">
+                    <Outlet ></Outlet>
+                </div>
             </div>
-            <div className="bg-[#1D231F] mt-8 md:mt-12 rounded">
+            <div className=" mt-8 md:mt-12 rounded">
                 <Footer ></Footer>
             </div>
         </div>

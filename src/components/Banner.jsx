@@ -8,6 +8,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import {  NavLink } from 'react-router-dom';
+import BtnSmall from './BtnSmall';
 
 
 const img1 = "https://i.ibb.co/3p77c5H/pexels-souvenirpixels-417074.jpg"
@@ -65,7 +66,7 @@ const Banner = () => {
                                 <p>It`s not Just Travel. we create Lifelong Adventure</p>
 
                                 <div>
-                                    <NavLink to="/signIn" > <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Get Started`}</button></NavLink>
+                                    <NavLink to="/signIn" ><BtnSmall title="Get Started"/></NavLink>
                                 </div>
 
                             </div>
@@ -100,7 +101,7 @@ const Banner = () => {
 
                                 <p >It`s not Just Travel. we create Lifelong Adventures</p>
                                 <div>
-                                    <NavLink to="/signIn" > <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Get Started`}</button></NavLink>
+                                    <NavLink to="/signIn" ><BtnSmall title="Get Started"/></NavLink>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +135,7 @@ const Banner = () => {
 
                                 <p >It`s not Just Travel. we create Lifelong Adventures</p>
                                 <div>
-                                    <NavLink to="/signIn" > <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Get Started`}</button></NavLink>
+                                    <NavLink to="/signIn" ><BtnSmall title="Get Started"/></NavLink>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +169,7 @@ const Banner = () => {
 
                                 <p>It`s not Just Travel. we create Lifelong Adventures</p>
                                 <div>
-                                    <NavLink to="/signIn" > <button className="font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center">{`Get Started`}</button></NavLink>
+                                    <NavLink to="/signIn" ><BtnSmall title="Get Started"/></NavLink>
                                 </div>
                             </div>
                         </div>

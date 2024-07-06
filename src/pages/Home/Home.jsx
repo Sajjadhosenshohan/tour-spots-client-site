@@ -16,13 +16,12 @@ const Home = () => {
     const { loading } = useContext(AuthContext)
     if (loading) {
         return <div className="flex items-center justify-center my-[150px]">
-            <div className="md:w-28 md:h-28 w-12 h-12 border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
+            <div className="md:w-28 md:h-28 w-12 h-12 border-4 border-dashed rounded-full animate-spin border-primary"></div>
         </div>
-
     }
 
     return (
-        <div className="mt-12">
+        <div>
             <Helmet>
                 <title>Home</title>
             </Helmet>

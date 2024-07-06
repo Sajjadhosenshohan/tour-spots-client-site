@@ -1,5 +1,6 @@
 import { Fade } from "react-awesome-reveal";
 import { FaStar } from "react-icons/fa6";
+import Btn from "./Btn";
 
 
 const CustomarReview = () => {
@@ -15,7 +16,7 @@ const CustomarReview = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 {/* review 1 */}
-                <div data-aos="fade-down" className="container flex flex-col w-full max-w-lg  mx-auto divide-y shadow-lg rounded-lg overflow-hidden border-2 dark:bg-[#f4f3f0] dark:text-gray-800">
+                <div data-aos="fade-down" className="container flex flex-col w-full max-w-lg  mx-auto divide-y shadow-lg rounded-lg overflow-hidden border-2 bg-white text-black  relative cursor-pointer   hover:bg-secondary transition-all duration-300  ">
                     <div className="p-4 pb-0">
                         <div className="mb-3">
                             <img src="https://i.ibb.co/kh47drG/pexels-olly-914927.jpg" alt="Reviewer's Name" className="object-cover w-12 h-12 rounded-full " />
@@ -38,13 +39,11 @@ const CustomarReview = () => {
                         <p>The property was in excellent condition and the staff were very helpful. The location is convenient and the view is breathtaking.</p>
                         <p>The estate is well-maintained and offers a comfortable stay. Highly recommended for anyone looking for a peaceful retreat.</p>
 
-                        <button className=" bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            Contact Reviewer
-                        </button>
+                        <Btn title='Contact Reviewer'/>
                     </div>
                 </div>
                 {/* review 2 */}
-                <div data-aos="fade-down" className="container flex flex-col w-full max-w-lg  mx-auto divide-y  shadow-lg rounded-lg overflow-hidden border-2 dark:bg-[#f4f3f0] dark:text-gray-800">
+                <div data-aos="fade-down" className="container flex flex-col w-full max-w-lg  mx-auto divide-y shadow-lg rounded-lg overflow-hidden border-2 bg-white text-black  relative cursor-pointer   hover:bg-secondary transition-all duration-300  ">
                     <div className="p-4 pb-0  ">
                         <div className="mb-3">
                             <img src="https://i.ibb.co/SJXbyDq/pexels-olly-840996.jpg" alt="Reviewer's Name" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
@@ -67,13 +66,11 @@ const CustomarReview = () => {
                         <p>The property was in excellent condition and the staff were very helpful. The location is convenient and the view is breathtaking.</p>
                         <p>The estate is well-maintained and offers a comfortable stay. Highly recommended for anyone looking for a peaceful retreat.</p>
 
-                        <button className=" bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            Contact Reviewer
-                        </button>
+                        <Btn title='Contact Reviewer'/>
                     </div>
                 </div>
                 {/* review 3 */}
-                <div data-aos="fade-down" className="container flex flex-col w-full max-w-lg  mx-auto divide-y  shadow-lg rounded-lg overflow-hidden border-2 dark:bg-[#f4f3f0] dark:text-gray-800">
+                <div data-aos="fade-down" className="container flex flex-col w-full max-w-lg  mx-auto divide-y shadow-lg rounded-lg overflow-hidden border-2 bg-white text-black  relative cursor-pointer   hover:bg-secondary transition-all duration-300  ">
                     <div className="p-4 pb-0  ">
                         <div className="mb-3">
                             <img src="https://i.ibb.co/ry0MtGQ/pexels-italo-melo-881954-2379004.jpg" alt="" className="object-cover w-12 h-12 rounded-full dark:bg-gray-500" />
@@ -96,9 +93,10 @@ const CustomarReview = () => {
                         <p>The property was in excellent condition and the staff were very helpful. The location is convenient and the view is breathtaking.</p>
                         <p>The estate is well-maintained and offers a comfortable stay. Highly recommended for anyone looking for a peaceful retreat.</p>
 
-                        <button className=" bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        {/* <button className=" bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                             Contact Reviewer
-                        </button>
+                        </button> */}
+                        <Btn title='Contact Reviewer'/>
                     </div>
                 </div>
 

@@ -14,7 +14,7 @@ const TargetCountry = () => {
 
     useEffect(() => {
 
-        fetch(`https://travel-server-virid.vercel.app/allTour`)
+        fetch(`http://localhost:5000/allTour`)
             .then(response => response.json())
             .then(data => {
 

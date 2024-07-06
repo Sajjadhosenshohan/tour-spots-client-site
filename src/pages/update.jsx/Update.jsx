@@ -39,7 +39,7 @@ const Update = () => {
 
 
 
-        fetch(`https://travel-server-virid.vercel.app/update/${_id}`, {
+        fetch(`http://localhost:5000/update/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const Update = () => {
 
     }
     return (
-        <div className="p-4 md:p-16 lg:p-24  bg-[#F4F3F0]
+        <div className="mt-12 mb-24 p-4 text-black lg:p-24  bg-[#F3F3F3]
         rounded-lg">
             <Fade direction="left">
             <h1 className='text-2xl md:text-4xl mx-auto  font-bold text-center mb-6 w-2/3 md:w-full dark:text-black'>Update Tourists Spot Form</h1>
@@ -189,9 +189,9 @@ const Update = () => {
                 </div>
 
                 {/* button */}
-                <div className="col-span-1 md:col-span-2 ">
+                <div className="col-span-1 md:col-span-2 flex justify-center">
 
-                    <input type="submit" value="Update Tourist spot" className="w-full font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center" />
+                    <input type="submit" value="Update Tourist spot" className="w-1/2 font-medium text-white text-lg md:text-xl md:pb-2 md:px-4 py-1 px-2 rounded-lg bg-primary text-center"/>
                 </div>
             </form>
         </div>
