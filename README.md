@@ -2,14 +2,12 @@
 
 ## Live Link: [https://tour-2b613.web.app/](https://tour-2b613.web.app/)
 
-## Server side : [https://github.com/Sajjadhosenshohan/tour-spots-server-side](https://github.com/Sajjadhosenshohan/tour-spots-server-side)
-
 ## Server side repository: [https://github.com/Sajjadhosenshohan/tour-spots-server-side](https://github.com/Sajjadhosenshohan/tour-spots-server-side)
 
 
 ## Project Overview
 
-GoWilds is an interactive tourism management platform focused on Southeast Asia. It provides comprehensive information about tourist destinations, allowing users to explore, manage itineraries, and add their favorite spots. The platform solves the problem of finding organized and user-friendly travel information, enhancing the overall travel experience by centralizing details about Southeast Asia's cultural and natural heritage.
+GoWilds is a website that helps people plan trips in Southeast Asia. It gathers information about popular tourist spots, making it easy for travelers to discover new places and organize their trips. Users can create their own lists of favorite spots, update them, and find information based on price and location.
 
 
 ## Technologies
@@ -60,11 +58,17 @@ Start the server:
 ### Environment Variables(Client side)
 
 `MONGODB_URI`= your_mongodb_uri
+
 `FIREBASE_API_KEY`=your_firebase_api_key
+
 `FIREBASE_AUTH_DOMAIN`=your_firebase_auth_domain
+
 `FIREBASE_PROJECT_ID`=your_firebase_project_id
+
 `FIREBASE_STORAGE_BUCKET`=your_firebase_storage_bucket
+
 `FIREBASE_MESSAGING_SENDER_ID`=your_firebase_messaging_sender_id
+
 `FIREBASE_APP_ID`=your_firebase_app_id
 
 
