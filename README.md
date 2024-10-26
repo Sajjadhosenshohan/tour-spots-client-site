@@ -28,7 +28,7 @@
 
 
 ## ⚙️ Installation Guide
-To set up **** on your local machine, follow these steps:
+To set up **Gowilds** on your local machine, follow these steps:
 
 ### Step 1: Clone the Client Repository
 ```bash
