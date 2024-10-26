@@ -18,13 +18,9 @@ GoWilds is a website that helps people plan trips in Southeast Asia. It gathers 
 
 ## Features
 
-- User Authentication: Secure login and registration using email/password and Google authentication.
+- Country-Based Filter: Users can filter tourist spots by country, making it easy to discover destinations specific to their preferred Southeast Asian location.
 
-- CRUD Operations: Users can create, read, update, and delete tourist spot entries.
-
-- My List and Update Options: Users can easily add and update their list of tourist spots using a simple form.
-
-
+- Dark Mode: The website offers a dark mode option, allowing users to switch to a darker theme for a more comfortable viewing experience, especially in low-light environments.
 
 
 ## Run Locally
