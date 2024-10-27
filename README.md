@@ -22,9 +22,11 @@
 
 ## ✨ Features
 
-- 📝 **Country-Based Filter**: Users can filter tourist spots by country, making it easy to discover destinations specific to their preferred Southeast Asian location.
+- 🌍 Country-Based Filter: Users can filter tourist spots by country, making it easy to discover destinations specific to their preferred Southeast Asian location.
 
-- 📝 **Theme Change Feature**: The website offers a dark mode option, allowing users to switch to a darker theme for a more comfortable viewing experience, especially in low-light environments.
+- 🌙 Theme Change option: The website offers a dark mode option, allowing users to switch to a darker theme for a more comfortable viewing experience, especially in low-light environments.
+
+- 🔍 Personal Spot Management and Price Filter: Users can view, update, and delete their own added tourist spots. In the "All Tourist Spots" section, they can also filter spots based on price, helping them find options that fit their budget.
 
 
 ## ⚙️ Installation Guide
