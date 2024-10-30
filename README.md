@@ -14,7 +14,7 @@
 
 ## 🛠 Technologies
 
-- 🌐 **Frontend**: React, React Router Dom, TailwindCSS, Daisy ui,
+- 🌐 **Frontend**: React, React Router Dom, TailwindCSS, Daisy ui,Vite
 - 🖥️ **Backend**: Node.js, Express, MongoDB
 - 🔐 **Authentication**: Firebase
   
