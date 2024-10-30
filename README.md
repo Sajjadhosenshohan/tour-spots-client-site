@@ -54,7 +54,7 @@ npm run dev
 
 ## 🌍 Environment Variables
 
-- `SERVER_URL`= your_server_uri
+- `VITE_API_URL`= "http://localhost:5000"
 - `FIREBASE_API_KEY`= your_firebase_api_key
 - `FIREBASE_AUTH_DOMAIN`= your_firebase_auth_domain
 - `FIREBASE_PROJECT_ID`= your_firebase_project_id
