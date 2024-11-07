@@ -24,7 +24,7 @@ import Error from './pages/Error/Error';
 
 
 
-// http://localhost:5000
+// https://travel-server-virid.vercel.app
 
 const router = createBrowserRouter([
   {
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch(`http://localhost:5000/allTour`)
+        loader: () => fetch(`${import.meta.env.VITE_API_URL}/allTour`)
 
       },
       {
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
       {
         path: "/allTour",
         element: <AllTourists></AllTourists>,
-        loader: () => fetch(`http://localhost:5000/allTour`)
+        loader: () => fetch(`${import.meta.env.VITE_API_URL}/allTour`)
       },
       {
         path: "/myList",
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       {
         path: "/updateForm/:id",
         element: <ProtectedRoute><Update></Update></ProtectedRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/update/${params.id}`)
+        loader: ({ params }) => fetch(`${import.meta.env.VITE_API_URL}/update/${params.id}`)
       },
       {
         path: "/signIn",

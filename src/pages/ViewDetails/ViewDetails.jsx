@@ -16,7 +16,7 @@ const ViewDetails = () => {
     const [details, setDetails] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/views/${id}`)
+        fetch(`${import.meta.env.VITE_API_URL}/views/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

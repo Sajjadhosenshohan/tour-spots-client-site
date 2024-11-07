@@ -28,7 +28,7 @@ const AddTourists = () => {
 
         const booking = { name, email, tourists_spot_name, country_Name, location, average_cost, totalVisitorsPerYear, travel_time, seasonality, short_description, image }
 
-        fetch(`http://localhost:5000/allTour`, {
+        fetch(`${import.meta.env.VITE_API_URL}/allTour`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

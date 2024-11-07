@@ -8,7 +8,7 @@ const Countries = () => {
     const [countries, setCountries] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/countriesData`)
+        fetch(`${import.meta.env.VITE_API_URL}/countriesData`)
             .then(res => res.json())
             .then(data => {
                 

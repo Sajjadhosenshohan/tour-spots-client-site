@@ -14,7 +14,7 @@ const TargetCountry = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/allTour`)
+        fetch(`${import.meta.env.VITE_API_URL}/allTour`)
             .then(response => response.json())
             .then(data => {
 
