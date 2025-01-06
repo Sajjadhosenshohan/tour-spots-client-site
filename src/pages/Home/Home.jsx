@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet";
 
 const Home = () => {
     const LoadInfo = useLoaderData();
-    const [tourInfos, setTourInfos] = useState(LoadInfo)
+    const [tourInfos, setTourInfos] = useState(LoadInfo || [])
 
     const { loading } = useContext(AuthContext)
     if (loading) {
