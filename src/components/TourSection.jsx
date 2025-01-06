@@ -3,7 +3,8 @@
 import SingleCardByUser from "./SingleCardByUser";
 import { Fade } from "react-awesome-reveal";
 const TourSection = ({ tourInfos, setTourInfos }) => {
-
+// Ensure that tourInfos is always an array
+    const validTourInfos = tourInfos ||  [];
 
     return (
         <div className="mt-24">
@@ -15,13 +16,15 @@ const TourSection = ({ tourInfos, setTourInfos }) => {
                 
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {
-                    (tourInfos.slice(0, 6)).map((tour, index) => <SingleCardByUser key={index}
-
-                        tour={tour}
-                        setTourInfos={setTourInfos}
-                    ></SingleCardByUser>)
+                    validTourInfos.slice(0, 6).map((tour, index) => (
+                        <SingleCardByUser 
+                            key={index} 
+                            tour={tour} 
+                            setTourInfos={setTourInfos}
+                        />
+                    ))
                 }
             </div>
 
