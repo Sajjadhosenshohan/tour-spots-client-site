@@ -63,7 +63,6 @@ npm run dev
 - `FIREBASE_APP_ID`= your_firebase_app_id
 
 
-
 ## 👨‍💻 Authors
 
 - [@Sajjadhosenshohan](https://github.com/Sajjadhosenshohan)
